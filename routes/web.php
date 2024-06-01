@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MerchantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,29 +53,9 @@ Route::get('/our-chapter', function () {
 Route::get('/blog', function () {
     return view('front/blog');
 });
-Route::get('/merchant', function () {
-    $products = [
-        [
-            'id' => 1,
-            'name' => 'jakcet',
-            'image' => url('front/merchant/jacket.jpg'),
-            'price' => 500000,
-            'description' => 'Jaket berbahan kulit. <br> Tersedia ukuran XXL,XL,L,M,S'
-        ],
-        [
-            'id' => 2,
-            'name' => 'stiker',
-            'image' => url('front/merchant/stiker.jpg'),
-            'price' => 10000,
-            'description' => 'Stiker anti air'
-        ],
-    ];
-    $product = json_encode($products);
-    return view('front/merchant', compact('product'));
-});
-Route::post('/checkout', function (Request $request) {
-    dd($request);
-});
+Route::get("/merchant", [MerchantController::class, "index"])->name("merchant.index");
+Route::post("/checkout", [MerchantController::class, "checkout"])->name("merchant.checkout");
+Route::post("/merchant_submit_form", [MerchantController::class, "submit_form"])->name("merchant.submit_form");
 
 Auth::routes();
 

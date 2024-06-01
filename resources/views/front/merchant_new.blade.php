@@ -3029,30 +3029,9 @@
                                             }
                                         </style>
                                         <form action="{{url('checkout')}}" method="post">
+                                            @csrf
                                             <div class="row">
-                                                <div class="col-50">
-                                                    <div class="container">
-                                                        @csrf
-                                                        <h3>Billing Address</h3>
-                                                        <div class="row">
-                                                            <div class="col-50">
-                                                                <label for="">Nama</label>
-                                                                <input type="text" id="nama" name="nama" required>
-                                                                <label for="">Email</label>
-                                                                <input type="text" id="email" name="email" required>
-                                                            </div>
-                                                            <div class="col-50">
-                                                                <label for="">No Tlp / WA</label>
-                                                                <input type="text" id="tlp" name="tlp" required>
-                                                                <label for="">Alamat Pengiriman</label>
-                                                                <input type="text" id="alamat" name="alamat" required>
-                                                            </div>
-                                                        </div>
-                                                        <button type="submit">Pesan</button>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-50">
+                                                <div class="col-75">
                                                     <div class="container">
                                                         <h4>Cart
                                                             <span class="price" style="color:black">
@@ -3064,6 +3043,7 @@
                                                         </table>
                                                         <hr>
                                                         <p><b>Total</b> <span class="price" style="color:black">Rp.<b class="total">0</b></span></p>
+                                                        <button type="submit">Checkout</button>
                                                     </div>
                                                 </div>
                                             </div>
