@@ -15,6 +15,15 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('nik')->unique();
+            $table->longText('address');
+            $table->string('phone');
+            $table->string('birth_place');
+            $table->date('birth_day');
+            $table->string('domisili');
+            $table->enum('usertype', ['prospect', 'virgin', 'lifemember'])->default('prospect');
+            $table->integer('status')->default(1);
+            $table->string('avatar')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

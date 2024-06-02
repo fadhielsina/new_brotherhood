@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('master_chapters', function (Blueprint $table) {
+        Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->string('name_chapter');
-            $table->string('location');
-            $table->string('logo_chapter');
+            $table->string('name_customer');
+            $table->string('email');
+            $table->string('phone');
+            $table->longText('address');
+            $table->integer('total');
             $table->timestamps();
         });
     }
@@ -25,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('master_chapters');
+        Schema::dropIfExists('transactions');
     }
 };

@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('master_chapters', function (Blueprint $table) {
-            $table->id();
-            $table->string('name_chapter');
-            $table->string('location');
-            $table->string('logo_chapter');
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->unsignedBigInteger('chapter_id');
+            $table->foreign('chapter_id')->references('id')->on('master_chapters')->onDelete('cascade');
         });
     }
 
@@ -25,6 +22,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('master_chapters');
+        Schema::table('users', function (Blueprint $table) {
+            //
+        });
     }
 };

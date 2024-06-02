@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Transaction;
+use App\Models\TransactionDetail;
 use Illuminate\Http\Request;
 
 class MerchantController extends Controller
@@ -37,6 +39,26 @@ class MerchantController extends Controller
 
     public function submit_form(Request $request)
     {
-        dd($request->all());
+        $transaction = new Transaction;
+        $transaction->name_customer = $request->nama;
+        $transaction->email = $request->email;
+        $transaction->phone = $request->tlp;
+        $transaction->address = $request->alamat;
+        $transaction->total = (int)$request->total * 1000;
+        $transaction->save();
+        $id_transaction = $transaction->id;
+
+        $i = 0;
+        foreach ($request->nama_produk as $val) :
+            $transaction_detail = new TransactionDetail;
+            $transaction_detail->transaction_id = $id_transaction;
+            $transaction_detail->name_product = $request->nama_produk[$i];
+            $transaction_detail->description = $request->deskripsi[$i];
+            $transaction_detail->qty = $request->qty[$i];
+            $transaction_detail->price = (int)$request->price[$i] * 1000;
+            $transaction_detail->save();
+            $i++;
+        endforeach;
+        return view('front/thanks');
     }
 }
