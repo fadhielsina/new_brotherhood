@@ -2816,12 +2816,7 @@
     <link rel='stylesheet' id='elementor-icons-fa-solid-css' href='{{asset("front")}}/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min52d5.css?ver=5.15.3' media='all' />
     <link rel='stylesheet' id='elementor-icons-fa-regular-css' href='{{asset("front")}}/wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min52d5.css?ver=5.15.3' media='all' />
     <link rel='stylesheet' id='elementor-icons-fa-brands-css' href='{{asset("front")}}/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min52d5.css?ver=5.15.3' media='all' />
-    <link rel="preconnect" href="{{asset('front')}}/https://fonts.gstatic.com/" crossorigin><!--[if IE]>
-<script src="{{asset('front')}}/{{asset('front')}}//wp-content/themes/astra/assets/js/minified/flexibility.min.js?ver=4.6.16" id="astra-flexibility-js"></script>
-<script id="astra-flexibility-js-after">
-flexibility(document.documentElement);
-</script>
-<![endif]-->
+    <link rel="preconnect" href="{{asset('front')}}/https://fonts.gstatic.com/" crossorigin>
     <link rel="https://api.w.org/" href="{{asset('front')}}/wp-json/index.html" />
     <link rel="alternate" type="application/json" href="{{asset('front')}}/wp-json/wp/v2/pages/73.json" />
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="{{asset('front')}}/xmlrpc0db0.php?rsd" />
@@ -2905,7 +2900,7 @@ flexibility(document.documentElement);
                                                 </li>
                                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131"><a href="{{url('/our-chapter')}}" class="elementor-item menu-link">OUR CHAPTER</a></li>
                                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-968"><a href="{{url('/blog')}}" class="elementor-item menu-link">BLOG</a></li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="{{url('/merchant')}}" class="elementor-item menu-link">MERCHANT</a></li>
+                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="{{url('/merchant')}}" class="elementor-item menu-link">MERCHANDISE</a></li>
                                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="{{url('/login')}}" class="elementor-item menu-link">LOGIN</a></li>
                                             </ul>
                                         </nav>
@@ -3058,7 +3053,7 @@ flexibility(document.documentElement);
                                             <div class="elementor-image-box-wrapper">
                                                 <figure class="elementor-image-box-img"><img decoding="async" width="450" height="550" src="{{asset('front')}}/wp-content/uploads/2022/06/diamond-logo-bb1mc.webp" class="attachment-full size-full wp-image-1102" alt="" /></figure>
                                                 <div class="elementor-image-box-content">
-                                                    <p class="elementor-image-box-description">BAKTI​<BR>
+                                                    <p class="elementor-image-box-description">BAKTI <br>
                                                         UNTUK NEGERI</p>
                                                 </div>
                                             </div>
@@ -3907,7 +3902,7 @@ flexibility(document.documentElement);
                                             </li>
                                             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131"><a href="{{url('/our-chapter')}}" class="elementor-item menu-link">OUR CHAPTER</a></li>
                                             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-968"><a href="{{url('/blog')}}" class="elementor-item menu-link">BLOG</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="{{url('/merchant')}}" class="elementor-item menu-link">MERCHANT</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="{{url('/merchant')}}" class="elementor-item menu-link">MERCHANDISE</a></li>
                                             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="{{url('/login')}}" class="elementor-item menu-link">LOGIN</a></li>
                                         </ul>
                                     </nav>

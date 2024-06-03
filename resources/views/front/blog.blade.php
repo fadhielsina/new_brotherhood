@@ -2904,7 +2904,7 @@ flexibility(document.documentElement);
                                                 </li>
                                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131"><a href="{{url('/our-chapter')}}" class="elementor-item menu-link">OUR CHAPTER</a></li>
                                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-968"><a href="{{url('/blog')}}" class="elementor-item menu-link elementor-item-active">BLOG</a></li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="{{url('/merchant')}}" class="elementor-item menu-link">MERCHANT</a></li>
+                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="{{url('/merchant')}}" class="elementor-item menu-link">MERCHANDISE</a></li>
                                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="{{url('/login')}}" class="elementor-item menu-link">LOGIN</a></li>
                                             </ul>
                                         </nav>
@@ -3731,7 +3731,7 @@ flexibility(document.documentElement);
                                             </li>
                                             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131"><a href="{{url('/our-chapter')}}" class="elementor-item menu-link">OUR CHAPTER</a></li>
                                             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-968"><a href="{{url('/blog')}}" class="elementor-item menu-link elementor-item-active">BLOG</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="{{url('/merchant')}}" class="elementor-item menu-link">MERCHANT</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="{{url('/merchant')}}" class="elementor-item menu-link">MERCHANDISE</a></li>
                                             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="{{url('/login')}}" class="elementor-item menu-link">LOGIN</a></li>
                                         </ul>
                                     </nav>

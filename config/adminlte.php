@@ -308,6 +308,36 @@ return [
             'label_color' => 'success',
         ],
         [
+            'text' => 'CMS',
+            'icon' => 'fas fa-fw fa-copy',
+            'submenu' => [
+                [
+                    'text' => 'Home',
+                    'url' => 'master_member',
+                ],
+                [
+                    'text' => 'About US',
+                    'url' => 'member_request',
+                ],
+                [
+                    'text' => 'El Presidente',
+                    'url' => 'member_request',
+                ],
+                [
+                    'text' => '1% Program',
+                    'url' => 'member_request',
+                ],
+                [
+                    'text' => 'Our Chapter',
+                    'url' => 'member_request',
+                ],
+                [
+                    'text' => 'Blog',
+                    'url' => 'member_request',
+                ],
+            ]
+        ],
+        [
             'header' => 'MASTER',
             'can' => 'admin'
         ],

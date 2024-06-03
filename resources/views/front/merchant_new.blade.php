@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    <title>Merchant &#8211; Bikers BrotherHood 1% MC</title>
+    <title>MERCHANDISE &#8211; Bikers BrotherHood 1% MC</title>
     <meta name='robots' content='max-image-preview:large' />
     <link rel="alternate" type="application/rss+xml" title="Bikers BrotherHood 1% MC &raquo; Feed" href="{{asset('front')}}/feed/index.html" />
     <link rel="alternate" type="application/rss+xml" title="Bikers BrotherHood 1% MC &raquo; Comments Feed" href="{{asset('front')}}/comments/feed/index.html" />
@@ -2797,7 +2797,7 @@
                                                 </li>
                                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131"><a href="{{url('/our-chapter')}}" class="elementor-item menu-link">OUR CHAPTER</a></li>
                                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-968"><a href="{{url('/blog')}}" class="elementor-item menu-link ">BLOG</a></li>
-                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="{{url('/merchant')}}" class="elementor-item menu-link elementor-item-active">MERCHANT</a></li>
+                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="{{url('/merchant')}}" class="elementor-item menu-link elementor-item-active">MERCHANDISE</a></li>
                                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="{{url('/login')}}" class="elementor-item menu-link">LOGIN</a></li>
                                             </ul>
                                         </nav>
@@ -2891,7 +2891,7 @@
                                                                     font-size: 59px
                                                                 }
                                                             </style>
-                                                            <h2 class="elementor-heading-title elementor-size-default">Merchant</h2>
+                                                            <h2 class="elementor-heading-title elementor-size-default">MERCHANDISE</h2>
                                                         </div>
                                                     </div>
                                                     <section class="elementor-section elementor-inner-section elementor-element elementor-element-7d6530bc elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7d6530bc" data-element_type="section">
@@ -2920,7 +2920,7 @@
                                                                             <div class="elementor-button-wrapper">
                                                                                 <a class="elementor-button elementor-button-link elementor-size-xs" href="#">
                                                                                     <span class="elementor-button-content-wrapper">
-                                                                                        <span class="elementor-button-text">Merchant</span>
+                                                                                        <span class="elementor-button-text">MERCHANDISE</span>
                                                                                     </span>
                                                                                 </a>
                                                                             </div>
@@ -3729,7 +3729,7 @@
                                             </li>
                                             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131"><a href="{{url('/our-chapter')}}" class="elementor-item menu-link">OUR CHAPTER</a></li>
                                             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-968"><a href="{{url('/blog')}}" class="elementor-item menu-link ">BLOG</a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="{{url('/merchant')}}" class="elementor-item menu-link elementor-item-active">MERCHANT</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="{{url('/merchant')}}" class="elementor-item menu-link elementor-item-active">MERCHANDISE</a></li>
                                             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="{{url('/login')}}" class="elementor-item menu-link">LOGIN</a></li>
                                         </ul>
                                     </nav>

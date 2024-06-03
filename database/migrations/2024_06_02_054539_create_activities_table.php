@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name_activity');
             $table->dateTime('start_date');
             $table->dateTime('end_date');
+            $table->longText('description');
             $table->integer('status')->default(1);
             $table->timestamps();
         });

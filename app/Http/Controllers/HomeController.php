@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Activity;
 use App\Models\MasterChapter;
 use App\Models\MasterProgram;
 use App\Models\User;
@@ -35,6 +36,7 @@ class HomeController extends Controller
         $data['jumlah_member'] = User::where('status', 1)->count();
         $data['jumlah_chapter'] = MasterChapter::count();
         $data['jumlah_program'] = MasterProgram::count();
+        $data['jumlah_activity'] = Activity::get();
         return view('home', compact('data'));
     }
 }

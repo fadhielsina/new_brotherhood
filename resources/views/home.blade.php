@@ -10,8 +10,8 @@
 
 @role("admin")
 <div class="row">
-    <div class="col-lg-3 col-6">
 
+    <div class="col-lg-3 col-6">
         <div class="small-box bg-info">
             <div class="inner">
                 <h3>{{$data['jumlah_member']}}</h3>
@@ -25,7 +25,6 @@
     </div>
 
     <div class="col-lg-3 col-6">
-
         <div class="small-box bg-success">
             <div class="inner">
                 <h3>{{$data['jumlah_chapter']}}</h3>
@@ -39,7 +38,6 @@
     </div>
 
     <div class="col-lg-3 col-6">
-
         <div class="small-box bg-warning">
             <div class="inner">
                 <h3>{{$data['jumlah_program']}}</h3>
@@ -53,16 +51,15 @@
     </div>
 
     <div class="col-lg-3 col-6">
-
         <div class="small-box bg-danger">
             <div class="inner">
-                <h3>65</h3>
+                <h3>{{$data['jumlah_activity']->count()}}</h3>
                 <p>Jumlah News Activity</p>
             </div>
             <div class="icon">
                 <i class="ion ion-pie-graph"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{route('news_activity.index')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
         </div>
     </div>
 
@@ -128,25 +125,23 @@
         </div>
         <div class="col-md-12">
             <div class="timeline">
-
+                <!-- Start Looping -->
+                @foreach($data['jumlah_activity'] as $val)
                 <div class="time-label">
-                    <span class="bg-red">1 April 2024</span>
+                    <span class="bg-red">{{date("d-M-Y", strtotime($val->start_date))}}</span>
                 </div>
-
                 <div>
                     <i class="fas fa-envelope bg-blue"></i>
                     <div class="timeline-item">
-                        <span class="time"><i class="fas fa-clock"></i> 12:05</span>
-                        <h3 class="timeline-header">BROTHERHOOD FOR FAITH</h3>
+                        <span class="time"><i class="fas fa-clock"></i> {{date("d-M-Y", strtotime($val->end_date))}}</span>
+                        <h3 class="timeline-header">{{$val->program->name_program}}</h3>
                         <div class="timeline-body">
-                            Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
-                            weebly ning heekya handango imeem plugg dopplr jibjab, movity
-                            jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
-                            quora plaxo ideeli hulu weebly balihoo...
+                            {{$val->description}}
                         </div>
                     </div>
                 </div>
-
+                @endforeach
+                <!-- End Looping -->
                 <div>
                     <i class="fas fa-clock bg-gray"></i>
                 </div>
