@@ -4,7 +4,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MasterChapterController;
+use App\Http\Controllers\MasterMemberController;
+use App\Http\Controllers\MasterProgramController;
+use App\Http\Controllers\MemberRequestController;
 use App\Http\Controllers\MerchantController;
+use App\Http\Controllers\RegisterUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,10 +62,15 @@ Route::get("/merchant", [MerchantController::class, "index"])->name("merchant.in
 Route::post("/checkout", [MerchantController::class, "checkout"])->name("merchant.checkout");
 Route::post("/merchant_submit_form", [MerchantController::class, "submit_form"])->name("merchant.submit_form");
 
+Route::resource('reguser', RegisterUserController::class);
+
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::group(['middleware' => ['can:admin']], function () {
-    Route::get('/master_member', [HomeController::class, 'master_member'])->name('master_member');
+    Route::resource('master_member', MasterMemberController::class);
+    Route::resource('member_request', MemberRequestController::class);
+    Route::resource('master_chapter', MasterChapterController::class);
+    Route::resource('master_program', MasterProgramController::class);
 });

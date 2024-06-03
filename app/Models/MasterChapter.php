@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class MasterChapter extends Model
 {
     use HasFactory;
+    protected $guarded = [];
+
+    public function user()
+    {
+        return $this->hasOne(MasterChapter::class);
+    }
 }

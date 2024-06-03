@@ -260,7 +260,7 @@ return [
     'dashboard_url' => 'home',
     'logout_url' => 'logout',
     'login_url' => 'login',
-    'register_url' => 'register',
+    'register_url' => 'reguser',
     'password_reset_url' => 'password/reset',
     'password_email_url' => 'password/email',
     'profile_url' => false,
@@ -303,7 +303,7 @@ return [
         // Sidebar items:
         [
             'text' => 'Dashboard',
-            'url' => '/home',
+            'url' => 'home',
             'icon' => 'fas fa-fw fa-tachometer-alt',
             'label_color' => 'success',
         ],
@@ -317,25 +317,25 @@ return [
             'submenu' => [
                 [
                     'text' => 'List All Member',
-                    'url' => '/master_member',
+                    'url' => 'master_member',
                     'can' => 'admin'
                 ],
                 [
                     'text' => 'List Member Request',
-                    'url' => 'admin/master_member',
+                    'url' => 'member_request',
                     'can' => 'admin'
                 ],
             ]
         ],
         [
             'text' => 'Master Chapter',
-            'url' => 'admin/master_chapter',
+            'url' => 'master_chapter',
             'icon' => 'fas fa-fw fa-lock',
             'can' => 'admin'
         ],
         [
             'text' => 'Master Program',
-            'url' => 'admin/master_program',
+            'url' => 'master_program',
             'icon' => 'fas fa-fw fa-file',
             'can' => 'admin'
         ],
@@ -345,7 +345,7 @@ return [
         ],
         [
             'text' => 'All News Activity',
-            'url' => 'admin/master_chapter',
+            'url' => 'news_activity',
             'icon' => 'fas fa-fw fa-table',
             'can' => 'admin'
         ],

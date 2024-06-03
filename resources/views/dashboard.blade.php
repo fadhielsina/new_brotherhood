@@ -46,20 +46,21 @@
             <div class="col-12 col-sm-6 col-md-7 d-flex align-items-stretch flex-column">
                 <div class="card bg-light d-flex flex-fill">
                     <div class="card-header text-muted border-bottom-0">
-                        Digital Strategist
+                        {{Auth::user()->nik}}
                     </div>
                     <div class="card-body pt-0">
                         <div class="row">
                             <div class="col-7">
-                                <h2 class="lead"><b>Nicole Pearson</b></h2>
-                                <p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+                                <h2 class="lead"><b>{{Auth::user()->name}}</b></h2>
+                                <p class="text-muted text-sm"><b>Type Member: </b> {{Auth::user()->usertype}} </p>
                                 <ul class="ml-4 mb-0 fa-ul text-muted">
-                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Address: Demo Street 123, Demo City 04312, NJ</li>
-                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone #: + 800 - 12 12 23 52</li>
+                                    <li class=""><span class="fa-li"><i class="fas fa-solid fa-building"></i></span> Address: {{Auth::user()->address}}</li>
+                                    <li class=""><span class="fa-li"><i class="fas fa-solid fa-phone"></i></span> Phone: {{Auth::user()->phone}}</li>
                                 </ul>
                             </div>
                             <div class="col-5 text-center">
-                                <img src="{{asset('assets')}}/kartu_anggota/profile_1.jpg" alt="user-avatar" class="img-circle img-fluid">
+                                <!-- <img src="{{asset('assets')}}/kartu_anggota/profile_1.jpg" alt="user-avatar" class="img-circle img-fluid"> -->
+                                <img src="{{ url('storage/avatar/'.Auth::user()->avatar.'') }}" style="height: 100px; width: 100px;" alt="user-avatar" class="img-circle img-fluid">
                             </div>
                         </div>
                     </div>

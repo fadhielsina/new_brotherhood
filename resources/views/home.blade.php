@@ -14,13 +14,13 @@
 
         <div class="small-box bg-info">
             <div class="inner">
-                <h3>150</h3>
+                <h3>{{$data['jumlah_member']}}</h3>
                 <p>Jumlah Member</p>
             </div>
             <div class="icon">
                 <i class="ion ion-bag"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{route('master_member.index')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
         </div>
     </div>
 
@@ -28,13 +28,13 @@
 
         <div class="small-box bg-success">
             <div class="inner">
-                <h3>53</h3>
+                <h3>{{$data['jumlah_chapter']}}</h3>
                 <p>Jumlah Chapter</p>
             </div>
             <div class="icon">
                 <i class="ion ion-stats-bars"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{route('master_chapter.index')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
         </div>
     </div>
 
@@ -42,13 +42,13 @@
 
         <div class="small-box bg-warning">
             <div class="inner">
-                <h3>44</h3>
+                <h3>{{$data['jumlah_program']}}</h3>
                 <p>Jumlah Program</p>
             </div>
             <div class="icon">
                 <i class="ion ion-person-add"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{route('master_program.index')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
         </div>
     </div>
 
@@ -74,20 +74,21 @@
             <div class="col-12 col-sm-6 col-md-7 d-flex align-items-stretch flex-column">
                 <div class="card bg-light d-flex flex-fill">
                     <div class="card-header text-muted border-bottom-0">
-                        Digital Strategist
+                        {{Auth::user()->nik}}
                     </div>
                     <div class="card-body pt-0">
                         <div class="row">
                             <div class="col-7">
-                                <h2 class="lead"><b>Nicole Pearson</b></h2>
-                                <p class="text-muted text-sm"><b>About: </b> Web Designer / UX / Graphic Artist / Coffee Lover </p>
+                                <h2 class="lead"><b>{{Auth::user()->name}}</b></h2>
+                                <p class="text-muted text-sm"><b>Type Member: </b> {{Auth::user()->usertype}} </p>
                                 <ul class="ml-4 mb-0 fa-ul text-muted">
-                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Address: Demo Street 123, Demo City 04312, NJ</li>
-                                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone #: + 800 - 12 12 23 52</li>
+                                    <li class=""><span class="fa-li"><i class="fas fa-solid fa-building"></i></span> Address: {{Auth::user()->address}}</li>
+                                    <li class=""><span class="fa-li"><i class="fas fa-solid fa-phone"></i></span> Phone: {{Auth::user()->phone}}</li>
                                 </ul>
                             </div>
                             <div class="col-5 text-center">
                                 <img src="{{asset('assets')}}/kartu_anggota/profile_1.jpg" alt="user-avatar" class="img-circle img-fluid">
+                                <!-- <img src="{{ url('storage/avatar/'.Auth::user()->avatar.'') }}" style="height: 100px; width: 100px;" alt="user-avatar" class="img-circle img-fluid"> -->
                             </div>
                         </div>
                     </div>
