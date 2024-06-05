@@ -3080,7 +3080,7 @@
                                 <div class="elementor-widget-wrap elementor-element-populated">
                                     <div class="elementor-element elementor-element-b74a0f7 elementor-widget elementor-widget-image" data-id="b74a0f7" data-element_type="widget" data-widget_type="image.default">
                                         <div class="elementor-widget-container">
-                                            <img decoding="async" width="980" height="683" src="{{asset('front')}}/wp-content/uploads/2022/06/about-us-img-01.webp" class="attachment-large size-large wp-image-487" alt="" />
+                                            <img decoding="async" width="980" height="683" src="{{asset('front')}}/{{$data['section_img']}}" class="attachment-large size-large wp-image-487" alt="" />
                                         </div>
                                     </div>
                                 </div>
@@ -3089,7 +3089,7 @@
                                 <div class="elementor-widget-wrap elementor-element-populated">
                                     <div class="elementor-element elementor-element-4cf5ece elementor-invisible elementor-widget elementor-widget-heading" data-id="4cf5ece" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInUp&quot;,&quot;_animation_delay&quot;:300}" data-widget_type="heading.default">
                                         <div class="elementor-widget-container">
-                                            <h2 class="elementor-heading-title elementor-size-default">BIKERS BROTHERHOOD <strong>1%</strong> MC </h2>
+                                            <h2 class="elementor-heading-title elementor-size-default"><?= nl2br($data['section_title']) ?> </h2>
                                         </div>
                                     </div>
                                     <div class="elementor-element elementor-element-74774a0 animated-slow elementor-invisible elementor-widget elementor-widget-text-editor" data-id="74774a0" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInUp&quot;,&quot;_animation_delay&quot;:0,&quot;_animation_mobile&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
@@ -3126,12 +3126,8 @@
                                                 .elementor-widget-text-editor .elementor-drop-cap-letter {
                                                     display: inline-block
                                                 }
-                                            </style> Berawal dari sekumpulan manusia yang mencintai dan menggunakan motor klasik buatan Amerika dan Eropa sehingga menjadi ciri khas klub Motor ini. Didirikan di Bandung pada 13 Juni 1988.
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-c698178 elementor-invisible elementor-widget elementor-widget-text-editor" data-id="c698178" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInUp&quot;,&quot;_animation_delay&quot;:700,&quot;_animation_mobile&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
-                                        <div class="elementor-widget-container">
-                                            <p><strong>1%</strong> Adalah 1% (One Percent) dari seluruh motorcycle club di Indonesia yang secara militan peduli terhadap bangsa.</p>
+                                            </style>
+                                            <?= nl2br($data['section_body']) ?>
                                         </div>
                                     </div>
                                     <div class="elementor-element elementor-element-5640346 elementor-align-left elementor-tablet-align-center elementor-mobile-align-center elementor-invisible elementor-widget elementor-widget-button" data-id="5640346" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInUp&quot;,&quot;_animation_delay&quot;:1000}" data-widget_type="button.default">
@@ -3197,7 +3193,7 @@
                                                 <div class="elementor-widget-wrap elementor-element-populated">
                                                     <div class="elementor-element elementor-element-e5e3f29 elementor-widget elementor-widget-image" data-id="e5e3f29" data-element_type="widget" data-widget_type="image.default">
                                                         <div class="elementor-widget-container">
-                                                            <img loading="lazy" decoding="async" width="1449" height="2560" src="{{asset('front')}}/wp-content/uploads/2023/01/1-scaled.webp" class="attachment-full size-full wp-image-1957" alt="" srcset="{{asset('front')}}//wp-content/uploads/2023/01/1-scaled.webp 1449w, {{asset('front')}}//wp-content/uploads/2023/01/1-869x1536.webp 869w, {{asset('front')}}//wp-content/uploads/2023/01/1-1159x2048.webp 1159w" sizes="(max-width: 1449px) 100vw, 1449px" />
+                                                            <img loading="lazy" decoding="async" width="1449" height="2560" src="{{asset('front')}}/{{$data['section_img2']}}" class="attachment-full size-full wp-image-1957" alt="" sizes="(max-width: 1449px) 100vw, 1449px" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -3206,12 +3202,12 @@
                                                 <div class="elementor-widget-wrap elementor-element-populated">
                                                     <div class="elementor-element elementor-element-631488e elementor-widget elementor-widget-heading" data-id="631488e" data-element_type="widget" data-widget_type="heading.default">
                                                         <div class="elementor-widget-container">
-                                                            <h2 class="elementor-heading-title elementor-size-default">el presidente</h2>
+                                                            <h2 class="elementor-heading-title elementor-size-default"><?= nl2br($data['section_title2']) ?></h2>
                                                         </div>
                                                     </div>
                                                     <div class="elementor-element elementor-element-49efbac elementor-widget elementor-widget-text-editor" data-id="49efbac" data-element_type="widget" data-widget_type="text-editor.default">
                                                         <div class="elementor-widget-container">
-                                                            <p>EL PRESIDENTE merupakan pemimpin tertinggi dan pemegang keputusan tertinggi dalam kepengurusan Bikers Brotherhood <strong>1%</strong>  MC. EL PRESIDENTE diangkat dalam Musyawarah Persaudaraan setelah dipilih oleh seluruh anggota Bikers Brotherhood <strong>1%</strong>  MC untuk massa kepemimpinan selama 4 (empat) tahun dan bertanggung jawab kepada seluruh anggota melalui Musyawarah Persaudaraan.</p>
+                                                            <p><?= nl2br($data['section_body2']) ?></p>
                                                         </div>
                                                     </div>
                                                     <div class="elementor-element elementor-element-0a4e559 elementor-align-left elementor-tablet-align-center elementor-mobile-align-center elementor-invisible elementor-widget elementor-widget-button" data-id="0a4e559" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInRight&quot;}" data-widget_type="button.default">
@@ -3239,12 +3235,12 @@
                                 <div class="elementor-widget-wrap elementor-element-populated">
                                     <div class="elementor-element elementor-element-e892d4d elementor-widget elementor-widget-heading" data-id="e892d4d" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="heading.default">
                                         <div class="elementor-widget-container">
-                                            <h2 class="elementor-heading-title elementor-size-default">CHAMBER OF KLAN</h2>
+                                            <h2 class="elementor-heading-title elementor-size-default"><?= nl2br($data['section_title3']) ?></h2>
                                         </div>
                                     </div>
                                     <div class="elementor-element elementor-element-7472e44 elementor-widget elementor-widget-text-editor" data-id="7472e44" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;,&quot;_animation_delay&quot;:0,&quot;_animation_mobile&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
                                         <div class="elementor-widget-container">
-                                            <p>CHAMBER OF KLAN Adalah lembaga non struktural yang Memelihara arah kebijakan, masukan dan pertimbangan kepada EL PRESIDENTE, dengan beranggotakan Ex-President</p>
+                                            <p><?= nl2br($data['section_body3']) ?></p>
                                         </div>
                                     </div>
                                     <div class="elementor-element elementor-element-c0c4492 elementor-align-left elementor-tablet-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="c0c4492" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="button.default">
@@ -3264,7 +3260,7 @@
                                 <div class="elementor-widget-wrap elementor-element-populated">
                                     <div class="elementor-element elementor-element-485ba8d elementor-invisible elementor-widget elementor-widget-image" data-id="485ba8d" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:1000}" data-widget_type="image.default">
                                         <div class="elementor-widget-container">
-                                            <img loading="lazy" decoding="async" width="1449" height="2560" src="{{asset('front')}}/wp-content/uploads/2023/01/2-scaled.webp" class="attachment-full size-full wp-image-1958" alt="" srcset="{{asset('front')}}//wp-content/uploads/2023/01/2-scaled.webp 1449w, {{asset('front')}}//wp-content/uploads/2023/01/2-869x1536.webp 869w, {{asset('front')}}//wp-content/uploads/2023/01/2-1159x2048.webp 1159w" sizes="(max-width: 1449px) 100vw, 1449px" />
+                                            <img loading="lazy" decoding="async" width="1449" height="2560" src="{{asset('front')}}/{{$data['section_img3']}}" class="attachment-full size-full wp-image-1958" alt="" sizes="(max-width: 1449px) 100vw, 1449px" />
                                         </div>
                                     </div>
                                 </div>
@@ -3273,7 +3269,7 @@
                                 <div class="elementor-widget-wrap elementor-element-populated">
                                     <div class="elementor-element elementor-element-c3563c6 elementor-invisible elementor-widget elementor-widget-image" data-id="c3563c6" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:1500}" data-widget_type="image.default">
                                         <div class="elementor-widget-container">
-                                            <img loading="lazy" decoding="async" width="2212" height="3908" src="{{asset('front')}}/wp-content/uploads/2023/01/3.png" class="attachment-full size-full wp-image-1959" alt="" srcset="{{asset('front')}}//wp-content/uploads/2023/01/3.png 2212w, {{asset('front')}}//wp-content/uploads/2023/01/3-869x1536.png 869w, {{asset('front')}}//wp-content/uploads/2023/01/3-1159x2048.png 1159w" sizes="(max-width: 2212px) 100vw, 2212px" />
+                                            <img loading="lazy" decoding="async" width="2212" height="3908" src="{{asset('front')}}/{{$data['section_img31']}}" class="attachment-full size-full wp-image-1959" alt="" sizes="(max-width: 2212px) 100vw, 2212px" />
                                         </div>
                                     </div>
                                 </div>
@@ -3282,7 +3278,7 @@
                                 <div class="elementor-widget-wrap elementor-element-populated">
                                     <div class="elementor-element elementor-element-232ead2 elementor-invisible elementor-widget elementor-widget-image" data-id="232ead2" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:2000}" data-widget_type="image.default">
                                         <div class="elementor-widget-container">
-                                            <img loading="lazy" decoding="async" width="1449" height="2560" src="{{asset('front')}}/wp-content/uploads/2023/01/4-scaled.webp" class="attachment-full size-full wp-image-1960" alt="" srcset="{{asset('front')}}//wp-content/uploads/2023/01/4-scaled.webp 1449w, {{asset('front')}}//wp-content/uploads/2023/01/4-869x1536.webp 869w, {{asset('front')}}//wp-content/uploads/2023/01/4-1159x2048.webp 1159w" sizes="(max-width: 1449px) 100vw, 1449px" />
+                                            <img loading="lazy" decoding="async" width="1449" height="2560" src="{{asset('front')}}/{{$data['section_img32']}}" class="attachment-full size-full wp-image-1960" alt="" sizes="(max-width: 1449px) 100vw, 1449px" />
                                         </div>
                                     </div>
                                 </div>

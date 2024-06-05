@@ -3049,10 +3049,11 @@ flexibility(document.documentElement);
                                                         <div class="elementor-widget-container">
                                                             <link rel="stylesheet" href="{{asset('front')}}/wp-content/plugins/elementor-pro/assets/css/widget-posts.min.css">
                                                             <div class="elementor-posts-container elementor-posts elementor-posts--skin-cards elementor-grid">
+                                                                <!-- Looping Blog -->
                                                                 <article class="elementor-post elementor-grid-item post-1806 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
                                                                     <div class="elementor-post__card">
                                                                         <a class="elementor-post__thumbnail__link" href="{{asset('front')}}/2022/10/13/34-tahun-bikers-brotherhood-1-mc-ajak-seluruh-bikers-kembali-turun-kejalan/index.html">
-                                                                            <div class="elementor-post__thumbnail"><img decoding="async" width="300" height="300" src="{{asset('front')}}/wp-content/uploads/2022/10/WhatsApp-Image-2022-10-11-at-8.45.55-PM-300x300.webp" class="attachment-medium size-medium wp-image-1807" alt="" srcset="https://bikersbrotherhood1percentmc.com/wp-content/uploads/2022/10/WhatsApp-Image-2022-10-11-at-8.45.55-PM-300x300.webp 300w, https://bikersbrotherhood1percentmc.com/wp-content/uploads/2022/10/WhatsApp-Image-2022-10-11-at-8.45.55-PM-1024x1024.webp 1024w, https://bikersbrotherhood1percentmc.com/wp-content/uploads/2022/10/WhatsApp-Image-2022-10-11-at-8.45.55-PM-150x150.webp 150w, https://bikersbrotherhood1percentmc.com/wp-content/uploads/2022/10/WhatsApp-Image-2022-10-11-at-8.45.55-PM-768x768.webp 768w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+                                                                            <div class="elementor-post__thumbnail"><img decoding="async" width="300" height="300" src="{{asset('front')}}/wp-content/uploads/2022/10/WhatsApp-Image-2022-10-11-at-8.45.55-PM-300x300.webp" class="attachment-medium size-medium wp-image-1807" alt="" sizes="(max-width: 300px) 100vw, 300px" /></div>
                                                                         </a>
                                                                         <div class="elementor-post__badge">Uncategorized</div>
                                                                         <div class="elementor-post__text">
@@ -3072,10 +3073,10 @@ flexibility(document.documentElement);
                                                                         </div>
                                                                     </div>
                                                                 </article>
-                                                                <article class="elementor-post elementor-grid-item post-1600 post type-post status-publish format-standard has-post-thumbnail hentry category-brotherhood-for-nature">
+                                                                <article class="elementor-post elementor-grid-item post-1806 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
                                                                     <div class="elementor-post__card">
                                                                         <a class="elementor-post__thumbnail__link" href="{{asset('front')}}/2022/08/26/bakti-untuk-negeri-bikers-brotherhood-1-mc-central-java-chapter-gelar-upacara-hut-ke-77-ri-di-ladang-tembakau-bersama-petani/index.html">
-                                                                            <div class="elementor-post__thumbnail"><img decoding="async" width="300" height="300" src="{{asset('front')}}/wp-content/uploads/2022/08/upacara-hut-RI-77-300x300.webp" class="attachment-medium size-medium wp-image-1601" alt="" srcset="https://bikersbrotherhood1percentmc.com/wp-content/uploads/2022/08/upacara-hut-RI-77-300x300.webp 300w, https://bikersbrotherhood1percentmc.com/wp-content/uploads/2022/08/upacara-hut-RI-77-1024x1024.webp 1024w, https://bikersbrotherhood1percentmc.com/wp-content/uploads/2022/08/upacara-hut-RI-77-150x150.webp 150w, https://bikersbrotherhood1percentmc.com/wp-content/uploads/2022/08/upacara-hut-RI-77-768x768.webp 768w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+                                                                            <div class="elementor-post__thumbnail"><img decoding="async" width="300" height="300" src="{{asset('front')}}/wp-content/uploads/2022/08/upacara-hut-RI-77-300x300.webp" class="attachment-medium size-medium wp-image-1601" alt="" sizes="(max-width: 300px) 100vw, 300px" /></div>
                                                                         </a>
                                                                         <div class="elementor-post__badge">BROTHERHOOD FOR NATURE</div>
                                                                         <div class="elementor-post__text">
@@ -3095,10 +3096,10 @@ flexibility(document.documentElement);
                                                                         </div>
                                                                     </div>
                                                                 </article>
-                                                                <article class="elementor-post elementor-grid-item post-1117 post type-post status-publish format-standard has-post-thumbnail hentry category-event-touring">
+                                                                <article class="elementor-post elementor-grid-item post-1806 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
                                                                     <div class="elementor-post__card">
                                                                         <a class="elementor-post__thumbnail__link" href="{{asset('front')}}/2022/06/14/pangandaran-bikers-brotherhood-1-mc-indonesia-kumpulkan-lebih-dari-1-000-bikers-dari-seluruh-penjuru-negeri/index.html">
-                                                                            <div class="elementor-post__thumbnail"><img loading="lazy" decoding="async" width="300" height="300" src="{{asset('front')}}/wp-content/uploads/2022/06/Sacred-Run-7-300x300.webp" class="attachment-medium size-medium wp-image-1118" alt="" srcset="https://bikersbrotherhood1percentmc.com/wp-content/uploads/2022/06/Sacred-Run-7-300x300.webp 300w, https://bikersbrotherhood1percentmc.com/wp-content/uploads/2022/06/Sacred-Run-7-150x150.webp 150w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+                                                                            <div class="elementor-post__thumbnail"><img loading="lazy" decoding="async" width="300" height="300" src="{{asset('front')}}/wp-content/uploads/2022/06/Sacred-Run-7-300x300.webp" class="attachment-medium size-medium wp-image-1118" alt="" sizes="(max-width: 300px) 100vw, 300px" /></div>
                                                                         </a>
                                                                         <div class="elementor-post__badge">EVENT TOURING</div>
                                                                         <div class="elementor-post__text">
@@ -3118,10 +3119,10 @@ flexibility(document.documentElement);
                                                                         </div>
                                                                     </div>
                                                                 </article>
-                                                                <article class="elementor-post elementor-grid-item post-988 post type-post status-publish format-standard has-post-thumbnail hentry category-brotherhood-for-faith">
+                                                                <article class="elementor-post elementor-grid-item post-1806 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
                                                                     <div class="elementor-post__card">
                                                                         <a class="elementor-post__thumbnail__link" href="{{asset('front')}}/2022/06/08/safari-ramadan-bikers-brohterhood-1-mc-west-java-chapter-berbagi-kebahagian-dengan-masyarakat/index.html">
-                                                                            <div class="elementor-post__thumbnail"><img loading="lazy" decoding="async" width="300" height="300" src="{{asset('front')}}/wp-content/uploads/2022/06/Berbagi-kebahagian-fe-image-001-300x300.png" class="attachment-medium size-medium wp-image-1007" alt="" srcset="https://bikersbrotherhood1percentmc.com/wp-content/uploads/2022/06/Berbagi-kebahagian-fe-image-001-300x300.png 300w, https://bikersbrotherhood1percentmc.com/wp-content/uploads/2022/06/Berbagi-kebahagian-fe-image-001-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px" /></div>
+                                                                            <div class="elementor-post__thumbnail"><img loading="lazy" decoding="async" width="300" height="300" src="{{asset('front')}}/wp-content/uploads/2022/06/Berbagi-kebahagian-fe-image-001-300x300.png" class="attachment-medium size-medium wp-image-1007" alt="" sizes="(max-width: 300px) 100vw, 300px" /></div>
                                                                         </a>
                                                                         <div class="elementor-post__badge">BROTHERHOOD FOR FAITH</div>
                                                                         <div class="elementor-post__text">
@@ -3141,10 +3142,8 @@ flexibility(document.documentElement);
                                                                         </div>
                                                                     </div>
                                                                 </article>
+                                                                <!-- End Looping -->
                                                             </div>
-
-
-
                                                         </div>
                                                     </div>
                                                 </div>

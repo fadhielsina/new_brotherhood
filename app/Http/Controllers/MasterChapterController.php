@@ -31,7 +31,6 @@ class MasterChapterController extends Controller
      */
     public function store(Request $request)
     {
-
         $request->validate([
             'name_chapter' => ['required'],
             'location' => ['required'],

@@ -69,9 +69,9 @@
                     <td>{{$val->program->name_program}}</td>
                     <td>{{$val->start_date}}</td>
                     <td>{{$val->end_date}}</td>
-                    <td>{{$val->description}}</td>
+                    <td><?= nl2br($val->description) ?></td>
                     <td>
-                        <a href="{{ route('master_chapter.edit', $val->id) }}" class="btn btn-sm btn-info"><i class="fas fa-edit"></i></a>
+                        <a href="{{ route('news_activity.edit', $val->id) }}" class="btn btn-sm btn-info"><i class="fas fa-edit"></i></a>
                         <button type="submit" class="btn btn-sm btn-danger" id="delete_data" value="{{$val->id}}"><i class="fas fa-trash"></i></button>
                     </td>
                 </tr>

@@ -313,27 +313,27 @@ return [
             'submenu' => [
                 [
                     'text' => 'Home',
-                    'url' => 'master_member',
+                    'url' => 'landing_page/home',
                 ],
                 [
                     'text' => 'About US',
-                    'url' => 'member_request',
+                    'url' => 'landing_page/about_us',
                 ],
                 [
                     'text' => 'El Presidente',
-                    'url' => 'member_request',
+                    'url' => 'landing_page/el_presidente',
                 ],
                 [
                     'text' => '1% Program',
-                    'url' => 'member_request',
+                    'url' => 'landing_page/one_program',
                 ],
                 [
                     'text' => 'Our Chapter',
-                    'url' => 'member_request',
+                    'url' => 'landing_page/our_chapter',
                 ],
                 [
                     'text' => 'Blog',
-                    'url' => 'member_request',
+                    'url' => 'landing_page/blog',
                 ],
             ]
         ],
@@ -444,17 +444,17 @@ return [
                 [
                     'type' => 'js',
                     'asset' => false,
-                    'location' => 'vendor/datatables/js/jquery.dataTables.min.js',
+                    'location' => '' . asset('vendor') . '/datatables/js/jquery.dataTables.min.js',
                 ],
                 [
                     'type' => 'js',
                     'asset' => false,
-                    'location' => 'vendor/datatables/js/dataTables.bootstrap4.min.js',
+                    'location' => '' . asset('vendor') . '/datatables/js/dataTables.bootstrap4.min.js',
                 ],
                 [
                     'type' => 'css',
                     'asset' => false,
-                    'location' => 'vendor/datatables/css/dataTables.bootstrap4.min.css',
+                    'location' => '' . asset('vendor') . '/datatables/css/dataTables.bootstrap4.min.css',
                 ],
             ],
         ],

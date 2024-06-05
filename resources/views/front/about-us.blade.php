@@ -3036,7 +3036,7 @@ flexibility(document.documentElement);
                                                 <div class="elementor-widget-wrap elementor-element-populated">
                                                     <div class="elementor-element elementor-element-895bf6b elementor-invisible elementor-widget elementor-widget-heading" data-id="895bf6b" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInUp&quot;,&quot;_animation_delay&quot;:0}" data-widget_type="heading.default">
                                                         <div class="elementor-widget-container">
-                                                            <h2 class="elementor-heading-title elementor-size-default">BIKERS BROTHERHOOD <strong>1%</strong> MC </h2>
+                                                            <h2 class="elementor-heading-title elementor-size-default"> <?= nl2br($data['section_title']) ?> </h2>
                                                         </div>
                                                     </div>
                                                     <div class="elementor-element elementor-element-b01d50e elementor-invisible elementor-widget elementor-widget-text-editor" data-id="b01d50e" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInUp&quot;,&quot;_animation_delay&quot;:300}" data-widget_type="text-editor.default">
@@ -3074,12 +3074,7 @@ flexibility(document.documentElement);
                                                                     display: inline-block
                                                                 }
                                                             </style>
-                                                            <p>Klub Motor yang menjunjung tinggi nilai persaudaraan sebagai jalan hidup, tanpa membedakan suku, ras, agama dan bangsa dengan tujuan utama untuk kemanusiaan. Berawal dari sekumpulan manusia yang mencintai dan menggunakan motor klasik buatan Amerika dan Eropa sehingga menjadi ciri khas klub Motor ini. Didirikan di Bandung pada 13 Juni 1988.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="elementor-element elementor-element-e68dac1 elementor-invisible elementor-widget elementor-widget-text-editor" data-id="e68dac1" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInUp&quot;,&quot;_animation_delay&quot;:600}" data-widget_type="text-editor.default">
-                                                        <div class="elementor-widget-container">
-                                                            <p><strong>1%</strong> Adalah 1% (One Percent) dari seluruh motorcycle club di Indonesia yang secara militan peduli terhadap bangsa.</p>
+                                                            <p><?= nl2br($data['section_body']) ?></p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -3088,7 +3083,7 @@ flexibility(document.documentElement);
                                                 <div class="elementor-widget-wrap elementor-element-populated">
                                                     <div class="elementor-element elementor-element-618e15f animated-slow elementor-invisible elementor-widget elementor-widget-image" data-id="618e15f" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_mobile&quot;:&quot;fadeIn&quot;}" data-widget_type="image.default">
                                                         <div class="elementor-widget-container">
-                                                            <img decoding="async" width="768" height="768" src="{{asset('front')}}/wp-content/uploads/2022/06/1.webp" class="attachment-large size-large wp-image-679" alt="" srcset="https://bikersbrotherhood1percentmc.com/wp-content/uploads/2022/06/1.webp 768w, https://bikersbrotherhood1percentmc.com/wp-content/uploads/2022/06/1-300x300.webp 300w, https://bikersbrotherhood1percentmc.com/wp-content/uploads/2022/06/1-150x150.webp 150w" sizes="(max-width: 768px) 100vw, 768px" />
+                                                            <img decoding="async" width="768" height="768" src="{{asset('front')}}/{{$data['section_img']}}" class="attachment-large size-large wp-image-679" alt="" sizes="(max-width: 768px) 100vw, 768px" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -3105,7 +3100,7 @@ flexibility(document.documentElement);
                                 <div class="elementor-widget-wrap elementor-element-populated">
                                     <div class="elementor-element elementor-element-fb206f5 elementor-widget elementor-widget-heading" data-id="fb206f5" data-element_type="widget" data-widget_type="heading.default">
                                         <div class="elementor-widget-container">
-                                            <h2 class="elementor-heading-title elementor-size-default">HUKUM PERSAUDARAAN</h2>
+                                            <h2 class="elementor-heading-title elementor-size-default"><?= nl2br($data['section_title2']) ?></h2>
                                         </div>
                                     </div>
                                 </div>
@@ -3129,12 +3124,11 @@ flexibility(document.documentElement);
                                                                 <div class="elementor-icon-box-content">
 
                                                                     <h3 class="elementor-icon-box-title">
-                                                                        <span>
-                                                                            Brotherhood </span>
+                                                                        <span><?= nl2br($data['section_subtitle']) ?></span>
                                                                     </h3>
 
                                                                     <p class="elementor-icon-box-description">
-                                                                        Persaudaraan Tanpa Batas.<br> </p>
+                                                                        <?= nl2br($data['section_subbody']) ?><br> </p>
 
                                                                 </div>
 
@@ -3161,12 +3155,11 @@ flexibility(document.documentElement);
                                                                 <div class="elementor-icon-box-content">
 
                                                                     <h3 class="elementor-icon-box-title">
-                                                                        <span>
-                                                                            Loyal </span>
+                                                                        <span><?= nl2br($data['section_subtitle2']) ?></span>
                                                                     </h3>
 
                                                                     <p class="elementor-icon-box-description">
-                                                                        Setia Terhadap BIKERS BROTHERHOOD 1% MC. </p>
+                                                                        <?= nl2br($data['section_subbody2']) ?> </p>
 
                                                                 </div>
 
@@ -3193,12 +3186,11 @@ flexibility(document.documentElement);
                                                                 <div class="elementor-icon-box-content">
 
                                                                     <h3 class="elementor-icon-box-title">
-                                                                        <span>
-                                                                            Respect </span>
+                                                                        <span><?= nl2br($data['section_subtitle3']) ?></span>
                                                                     </h3>
 
                                                                     <p class="elementor-icon-box-description">
-                                                                        Saling Menghormati Demi Keutuhan BIKERS BROTHERHOOD 1% MC. </p>
+                                                                        <?= nl2br($data['section_subbody3']) ?> </p>
 
                                                                 </div>
 
@@ -3229,12 +3221,11 @@ flexibility(document.documentElement);
                                                                 <div class="elementor-icon-box-content">
 
                                                                     <h3 class="elementor-icon-box-title">
-                                                                        <span>
-                                                                            Honour </span>
+                                                                        <span><?= nl2br($data['section_subtitle4']) ?></span>
                                                                     </h3>
 
                                                                     <p class="elementor-icon-box-description">
-                                                                        Menjungjung Tinggi Dan Menjaga Kehormatan BIKERS BROTHERHOOD 1% MC. </p>
+                                                                        <?= nl2br($data['section_subbody4']) ?></p>
 
                                                                 </div>
 
@@ -3261,12 +3252,11 @@ flexibility(document.documentElement);
                                                                 <div class="elementor-icon-box-content">
 
                                                                     <h3 class="elementor-icon-box-title">
-                                                                        <span>
-                                                                            Pride </span>
+                                                                        <span><?= nl2br($data['section_subtitle5']) ?></span>
                                                                     </h3>
 
                                                                     <p class="elementor-icon-box-description">
-                                                                        Menjaga Kebanggaan Sebagai anggota BIKERS BROTHERHOOD 1% MC. </p>
+                                                                        <?= nl2br($data['section_subbody5']) ?> </p>
 
                                                                 </div>
 

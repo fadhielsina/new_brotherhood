@@ -3051,7 +3051,7 @@ flexibility(document.documentElement);
                                                                 <div class="elementor-widget-wrap elementor-element-populated">
                                                                     <div class="elementor-element elementor-element-7465bba0 elementor-invisible elementor-widget elementor-widget-heading" data-id="7465bba0" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInUp&quot;,&quot;_animation_delay&quot;:0}" data-widget_type="heading.default">
                                                                         <div class="elementor-widget-container">
-                                                                            <h2 class="elementor-heading-title elementor-size-default">CHAPTER</h2>
+                                                                            <h2 class="elementor-heading-title elementor-size-default"><?= nl2br($data['section_title']) ?></h2>
                                                                         </div>
                                                                     </div>
                                                                     <div class="elementor-element elementor-element-3193a529 elementor-invisible elementor-widget elementor-widget-text-editor" data-id="3193a529" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInUp&quot;,&quot;_animation_delay&quot;:300}" data-widget_type="text-editor.default">
@@ -3089,7 +3089,7 @@ flexibility(document.documentElement);
                                                                                     display: inline-block
                                                                                 }
                                                                             </style>
-                                                                            <p>Chapter adalah Perwakilan Bikers Brotherhood 1% MC pada tingkat local suatu daerah yang berkedudukan di wilayah kota/provinsi atau penentuan wilayah berdasarakan keputusan musyawarah Persaudaraan dan diresmikan oleh EL Presidente.</p>
+                                                                            <p><?= nl2br($data['section_body']) ?></p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -3100,8 +3100,10 @@ flexibility(document.documentElement);
                                             </div>
                                         </div>
                                     </section>
+                                    <!-- Logo Chapter -->
                                     <section class="elementor-section elementor-top-section elementor-element elementor-element-1a49ec2 elementor-section-height-min-height elementor-section-content-top elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="1a49ec2" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
                                         <div class="elementor-container elementor-column-gap-default">
+
                                             <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-3be2513 elementor-invisible" data-id="3be2513" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
                                                 <div class="elementor-widget-wrap elementor-element-populated">
                                                     <div class="elementor-element elementor-element-b8b7c0d elementor-widget elementor-widget-image" data-id="b8b7c0d" data-element_type="widget" data-widget_type="image.default">
@@ -3190,10 +3192,12 @@ flexibility(document.documentElement);
                                                     </div>
                                                 </div>
                                             </div>
+
                                         </div>
                                     </section>
-                                    <section class="elementor-section elementor-top-section elementor-element elementor-element-e8f5088 elementor-section-height-min-height elementor-section-content-top elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="e8f5088" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+                                    <section class="elementor-section elementor-top-section elementor-element elementor-element-1a49ec2 elementor-section-height-min-height elementor-section-content-top elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="e8f5088" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
                                         <div class="elementor-container elementor-column-gap-default">
+
                                             <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-684e8d6 elementor-invisible" data-id="684e8d6" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
                                                 <div class="elementor-widget-wrap elementor-element-populated">
                                                     <div class="elementor-element elementor-element-a2e7364 elementor-widget elementor-widget-image" data-id="a2e7364" data-element_type="widget" data-widget_type="image.default">
@@ -3282,10 +3286,12 @@ flexibility(document.documentElement);
                                                     </div>
                                                 </div>
                                             </div>
+
                                         </div>
                                     </section>
-                                    <section class="elementor-section elementor-top-section elementor-element elementor-element-659a40a elementor-section-height-min-height elementor-section-content-top elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="659a40a" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+                                    <section class="elementor-section elementor-top-section elementor-element elementor-element-1a49ec2 elementor-section-height-min-height elementor-section-content-top elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="659a40a" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
                                         <div class="elementor-container elementor-column-gap-default">
+
                                             <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-b3c823d elementor-invisible" data-id="b3c823d" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
                                                 <div class="elementor-widget-wrap elementor-element-populated">
                                                     <div class="elementor-element elementor-element-20ee67e elementor-widget elementor-widget-image" data-id="20ee67e" data-element_type="widget" data-widget_type="image.default">
@@ -3374,10 +3380,12 @@ flexibility(document.documentElement);
                                                     </div>
                                                 </div>
                                             </div>
+
                                         </div>
                                     </section>
-                                    <section class="elementor-section elementor-top-section elementor-element elementor-element-ef0bd67 elementor-section-height-min-height elementor-section-content-top elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="ef0bd67" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+                                    <section class="elementor-section elementor-top-section elementor-element elementor-element-1a49ec2 elementor-section-height-min-height elementor-section-content-top elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="ef0bd67" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
                                         <div class="elementor-container elementor-column-gap-default">
+
                                             <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-8150aa5 elementor-invisible" data-id="8150aa5" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
                                                 <div class="elementor-widget-wrap elementor-element-populated">
                                                     <div class="elementor-element elementor-element-850331d elementor-widget elementor-widget-image" data-id="850331d" data-element_type="widget" data-widget_type="image.default">
@@ -3466,10 +3474,12 @@ flexibility(document.documentElement);
                                                     </div>
                                                 </div>
                                             </div>
+
                                         </div>
                                     </section>
-                                    <section class="elementor-section elementor-top-section elementor-element elementor-element-9f0bae5 elementor-section-height-min-height elementor-section-content-top elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="9f0bae5" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+                                    <section class="elementor-section elementor-top-section elementor-element elementor-element-1a49ec2 elementor-section-height-min-height elementor-section-content-top elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="9f0bae5" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
                                         <div class="elementor-container elementor-column-gap-default">
+
                                             <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-565dfaf elementor-invisible" data-id="565dfaf" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
                                                 <div class="elementor-widget-wrap elementor-element-populated">
                                                     <div class="elementor-element elementor-element-27af2dd elementor-widget elementor-widget-image" data-id="27af2dd" data-element_type="widget" data-widget_type="image.default">
@@ -3504,6 +3514,7 @@ flexibility(document.documentElement);
                                                 <div class="elementor-widget-wrap">
                                                 </div>
                                             </div>
+
                                         </div>
                                     </section>
                                 </div>

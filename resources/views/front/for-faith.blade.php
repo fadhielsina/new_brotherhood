@@ -3051,7 +3051,7 @@ flexibility(document.documentElement);
                                                                 <div class="elementor-widget-wrap elementor-element-populated">
                                                                     <div class="elementor-element elementor-element-cad410a elementor-invisible elementor-widget elementor-widget-heading" data-id="cad410a" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInUp&quot;,&quot;_animation_delay&quot;:0}" data-widget_type="heading.default">
                                                                         <div class="elementor-widget-container">
-                                                                            <h2 class="elementor-heading-title elementor-size-default">WHAT IS BFF?</h2>
+                                                                            <h2 class="elementor-heading-title elementor-size-default"><?= nl2br($data['section_title']) ?></h2>
                                                                         </div>
                                                                     </div>
                                                                     <div class="elementor-element elementor-element-1620b499 elementor-invisible elementor-widget elementor-widget-text-editor" data-id="1620b499" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInUp&quot;,&quot;_animation_delay&quot;:300}" data-widget_type="text-editor.default">
@@ -3089,17 +3089,17 @@ flexibility(document.documentElement);
                                                                                     display: inline-block
                                                                                 }
                                                                             </style>
-                                                                            <p>Program Kerja BFF merupakan implementasi Pengabdian nyata kepada Keluarga Besar BB1%MC, Masyarakat dan Bangsa Indonesia Dalam Lingkup Keberagaman Keyakinan Bangsa Indonesia sesuai dengan UUD 1945 &amp; Pancasila, Diselenggarakan oleh Seluruh Members &amp; Keluarga BB1%MCIndonesia. Sinergitas program BB1%MC dan Seluruh Stakeholder / masyarakat (Lembaga Pemerintahan (Kemenag RI-Ormas Keagamaan), Perusahaan Negara atau Swasta, Lembaga Pendidikan juga perorangan.</p>
+                                                                            <p><?= nl2br($data['section_body']) ?></p>
                                                                         </div>
                                                                     </div>
                                                                     <div class="elementor-element elementor-element-e8fec2d elementor-invisible elementor-widget elementor-widget-heading" data-id="e8fec2d" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInUp&quot;,&quot;_animation_delay&quot;:0}" data-widget_type="heading.default">
                                                                         <div class="elementor-widget-container">
-                                                                            <h2 class="elementor-heading-title elementor-size-default">Latar Belakang</h2>
+                                                                            <h2 class="elementor-heading-title elementor-size-default"><?= nl2br($data['section_title2']) ?></h2>
                                                                         </div>
                                                                     </div>
                                                                     <div class="elementor-element elementor-element-addd7cf elementor-invisible elementor-widget elementor-widget-text-editor" data-id="addd7cf" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInUp&quot;,&quot;_animation_delay&quot;:300}" data-widget_type="text-editor.default">
                                                                         <div class="elementor-widget-container">
-                                                                            <p>Tindakan nyata BFF sebagai salah satu Wing Squad BB1%MC dalam kegiatan sosial secara langsung dan mampu menyentuh masyarakat.</p>
+                                                                            <p><?= nl2br($data['section_body2']) ?></p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -3108,7 +3108,7 @@ flexibility(document.documentElement);
                                                                 <div class="elementor-widget-wrap elementor-element-populated">
                                                                     <div class="elementor-element elementor-element-46270c7 elementor-widget elementor-widget-image" data-id="46270c7" data-element_type="widget" data-widget_type="image.default">
                                                                         <div class="elementor-widget-container">
-                                                                            <img decoding="async" width="942" height="532" src="{{asset('front')}}/wp-content/uploads/2022/08/BFF-thumbnail-img.webp" class="attachment-large size-large wp-image-1257" alt="" />
+                                                                            <img decoding="async" width="942" height="532" src="{{asset('front')}}/{{$data['section_img']}}" class="attachment-large size-large wp-image-1257" alt="" />
                                                                         </div>
                                                                     </div>
                                                                     <div class="elementor-element elementor-element-c12138c elementor-widget elementor-widget-image-carousel" data-id="c12138c" data-element_type="widget" data-settings="{&quot;slides_to_show&quot;:&quot;3&quot;,&quot;slides_to_scroll&quot;:&quot;2&quot;,&quot;navigation&quot;:&quot;none&quot;,&quot;autoplay&quot;:&quot;no&quot;,&quot;image_spacing_custom&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;infinite&quot;:&quot;yes&quot;,&quot;speed&quot;:500,&quot;image_spacing_custom_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;image_spacing_custom_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="image-carousel.default">
@@ -3136,13 +3136,13 @@ flexibility(document.documentElement);
                                                                             <div class="elementor-image-carousel-wrapper swiper" dir="ltr">
                                                                                 <div class="elementor-image-carousel swiper-wrapper" aria-live="polite">
                                                                                     <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 of 3">
-                                                                                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{asset('front')}}/wp-content/uploads/2022/08/BFF-TN-009-300x300.webp" alt="BFF-TN-009" /></figure>
+                                                                                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{asset('front')}}/{{$data['section_img21']}}" alt="BFF-TN-009" /></figure>
                                                                                     </div>
                                                                                     <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="2 of 3">
-                                                                                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{asset('front')}}/wp-content/uploads/2022/08/BFF-TN-006-300x300.webp" alt="BFF-TN-006" /></figure>
+                                                                                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{asset('front')}}/{{$data['section_img22']}}" alt="BFF-TN-006" /></figure>
                                                                                     </div>
                                                                                     <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="3 of 3">
-                                                                                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{asset('front')}}/wp-content/uploads/2022/08/BFF-TN-005-300x300.webp" alt="BFF-TN-005" /></figure>
+                                                                                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{asset('front')}}/{{$data['section_img2']}}" alt="BFF-TN-005" /></figure>
                                                                                     </div>
                                                                                 </div>
 
@@ -3155,7 +3155,7 @@ flexibility(document.documentElement);
                                                     </section>
                                                     <div class="elementor-element elementor-element-15a4158 elementor-invisible elementor-widget elementor-widget-heading" data-id="15a4158" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInUp&quot;,&quot;_animation_delay&quot;:0}" data-widget_type="heading.default">
                                                         <div class="elementor-widget-container">
-                                                            <h2 class="elementor-heading-title elementor-size-default">TUJUAN</h2>
+                                                            <h2 class="elementor-heading-title elementor-size-default"><?= nl2br($data['section_title3']) ?></h2>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -3174,18 +3174,11 @@ flexibility(document.documentElement);
                                                                         <div class="elementor-widget-container">
                                                                             <link rel="stylesheet" href="{{asset('front')}}/wp-content/plugins/elementor/assets/css/widget-icon-box.min.css">
                                                                             <div class="elementor-icon-box-wrapper">
-
-
                                                                                 <div class="elementor-icon-box-content">
-
                                                                                     <h3 class="elementor-icon-box-title">
-                                                                                        <span>
-                                                                                            Terwujudnya kegiatan sosial Pengabdian kepada Masyarakat dalam lingkup keyakinan beragama yang diakui di Negara Indonesia </span>
+                                                                                        <span><?= nl2br($data['section_body3']) ?></span>
                                                                                     </h3>
-
-
                                                                                 </div>
-
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -3204,18 +3197,11 @@ flexibility(document.documentElement);
                                                                     <div class="elementor-element elementor-element-27e04f31 elementor-widget elementor-widget-icon-box" data-id="27e04f31" data-element_type="widget" data-widget_type="icon-box.default">
                                                                         <div class="elementor-widget-container">
                                                                             <div class="elementor-icon-box-wrapper">
-
-
                                                                                 <div class="elementor-icon-box-content">
-
                                                                                     <h3 class="elementor-icon-box-title">
-                                                                                        <span>
-                                                                                            Terwujudnya kemitraan dengan Lembaga Sosial, institusi pemerintahan (Kementrian Agama - Ormas Keagamaan dan masyarakat umum, Perorangan </span>
+                                                                                        <span><?= nl2br($data['section_body32']) ?></span>
                                                                                     </h3>
-
-
                                                                                 </div>
-
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -3234,18 +3220,11 @@ flexibility(document.documentElement);
                                                                     <div class="elementor-element elementor-element-60d8c7b4 elementor-widget elementor-widget-icon-box" data-id="60d8c7b4" data-element_type="widget" data-widget_type="icon-box.default">
                                                                         <div class="elementor-widget-container">
                                                                             <div class="elementor-icon-box-wrapper">
-
-
                                                                                 <div class="elementor-icon-box-content">
-
                                                                                     <h3 class="elementor-icon-box-title">
-                                                                                        <span>
-                                                                                            Meningkatnya kepedulian terhadap masyarakat di kalangan Keluarga Besar BB1%MC. </span>
+                                                                                        <span><?= nl2br($data['section_body32']) ?></span>
                                                                                     </h3>
-
-
                                                                                 </div>
-
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -3263,17 +3242,13 @@ flexibility(document.documentElement);
                                                 <div class="elementor-widget-wrap elementor-element-populated">
                                                     <div class="elementor-element elementor-element-223529e8 elementor-widget elementor-widget-heading" data-id="223529e8" data-element_type="widget" data-widget_type="heading.default">
                                                         <div class="elementor-widget-container">
-                                                            <h2 class="elementor-heading-title elementor-size-default">Program</h2>
+                                                            <h2 class="elementor-heading-title elementor-size-default"><?= nl2br($data['section_title4']) ?></h2>
                                                         </div>
                                                     </div>
                                                     <div class="elementor-element elementor-element-d069ab7 elementor-invisible elementor-widget elementor-widget-text-editor" data-id="d069ab7" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInUp&quot;,&quot;_animation_delay&quot;:300}" data-widget_type="text-editor.default">
                                                         <div class="elementor-widget-container">
                                                             <ul>
-                                                                <li>Kegiatan Penyaluran Beras secara Rutin Sinergi BB1%MC dengan Gerakan Infaq Beras (GIB) di seluruh Indonesia, yang bias dilakukan oleh seluruh chapter berkordinasi dengan Gerakan Infaq beras disetiap Provinsi</li>
-                                                                <li>Penyediaan Mobil Layanan Serbaguna yang Rencana Pendanaan bersumber dari penjualan &amp; lelang Merchandise BFF &amp; BB1%MC di seluruh chapter (skala prioritas Dan Bertahap)</li>
-                                                                <li>Penyediaan Bikers Hills (Tempat Pemakaman) dengan melakukan kerjasama dengan Ormas<br />Keagamaan, Pemerintah, Swasta, Perorangan &amp; lelang wakaf di seluruh chapter (skala prioritas<br />Dan Bertahap)</li>
-                                                                <li>Membina Dan Menjaga Toleransi Antara Keyakinan Seluruh Member &amp; Keluarga Besar BB1%MC dalam HBK (Hari Besar Keagamaan) sesuai UUD 1945</li>
-                                                                <li>Menambahkan Program yang dianggap perlu dikemudian hari.</li>
+                                                                <?= nl2br($data['section_body4']) ?>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -3507,44 +3482,44 @@ flexibility(document.documentElement);
                                                                 }
                                                             </style>
                                                             <div class="elementor-gallery__container">
-                                                                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="{{asset('front')}}/wp-content/uploads/2022/08/BFF-TN-007.webp" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-a6bd4c0" data-elementor-lightbox-title="BFF-TN-007" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM0NCwidXJsIjoiaHR0cHM6XC9cL2Jpa2Vyc2Jyb3RoZXJob29kMXBlcmNlbnRtYy5jb21cL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA4XC9CRkYtVE4tMDA3LndlYnAiLCJzbGlkZXNob3ciOiJhbGwtYTZiZDRjMCJ9">
-                                                                    <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://bikersbrotherhood1percentmc.com/wp-content/uploads/2022/08/BFF-TN-007.webp" data-width="1280" data-height="853" alt=""></div>
+                                                                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="{{asset('front')}}/{{$data['section_img4']}}" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-a6bd4c0" data-elementor-lightbox-title="BFF-TN-007" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM0NCwidXJsIjoiaHR0cHM6XC9cL2Jpa2Vyc2Jyb3RoZXJob29kMXBlcmNlbnRtYy5jb21cL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA4XC9CRkYtVE4tMDA3LndlYnAiLCJzbGlkZXNob3ciOiJhbGwtYTZiZDRjMCJ9">
+                                                                    <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="{{asset('front')}}/{{$data['section_img4']}}" data-width="1280" data-height="853" alt=""></div>
                                                                     <div class="elementor-gallery-item__overlay"></div>
                                                                 </a>
-                                                                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="{{asset('front')}}/wp-content/uploads/2022/08/BFF-TN-004.webp" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-a6bd4c0" data-elementor-lightbox-title="BFF-TN-004" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM0OCwidXJsIjoiaHR0cHM6XC9cL2Jpa2Vyc2Jyb3RoZXJob29kMXBlcmNlbnRtYy5jb21cL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA4XC9CRkYtVE4tMDA0LndlYnAiLCJzbGlkZXNob3ciOiJhbGwtYTZiZDRjMCJ9">
-                                                                    <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://bikersbrotherhood1percentmc.com/wp-content/uploads/2022/08/BFF-TN-004.webp" data-width="1280" data-height="853" alt=""></div>
+                                                                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="{{asset('front')}}/{{$data['section_img41']}}" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-a6bd4c0" data-elementor-lightbox-title="BFF-TN-004" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM0OCwidXJsIjoiaHR0cHM6XC9cL2Jpa2Vyc2Jyb3RoZXJob29kMXBlcmNlbnRtYy5jb21cL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA4XC9CRkYtVE4tMDA0LndlYnAiLCJzbGlkZXNob3ciOiJhbGwtYTZiZDRjMCJ9">
+                                                                    <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="{{asset('front')}}/{{$data['section_img41']}}" data-width="1280" data-height="853" alt=""></div>
                                                                     <div class="elementor-gallery-item__overlay"></div>
                                                                 </a>
-                                                                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="{{asset('front')}}/wp-content/uploads/2022/08/BFF-TN-009.webp" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-a6bd4c0" data-elementor-lightbox-title="BFF-TN-009" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM1NywidXJsIjoiaHR0cHM6XC9cL2Jpa2Vyc2Jyb3RoZXJob29kMXBlcmNlbnRtYy5jb21cL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA4XC9CRkYtVE4tMDA5LndlYnAiLCJzbGlkZXNob3ciOiJhbGwtYTZiZDRjMCJ9">
-                                                                    <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://bikersbrotherhood1percentmc.com/wp-content/uploads/2022/08/BFF-TN-009.webp" data-width="1280" data-height="853" alt=""></div>
+                                                                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="{{asset('front')}}/{{$data['section_img42']}}" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-a6bd4c0" data-elementor-lightbox-title="BFF-TN-009" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM1NywidXJsIjoiaHR0cHM6XC9cL2Jpa2Vyc2Jyb3RoZXJob29kMXBlcmNlbnRtYy5jb21cL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA4XC9CRkYtVE4tMDA5LndlYnAiLCJzbGlkZXNob3ciOiJhbGwtYTZiZDRjMCJ9">
+                                                                    <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="{{asset('front')}}/{{$data['section_img42']}}" data-width="1280" data-height="853" alt=""></div>
                                                                     <div class="elementor-gallery-item__overlay"></div>
                                                                 </a>
-                                                                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="{{asset('front')}}/wp-content/uploads/2022/08/BFF-TN-001.webp" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-a6bd4c0" data-elementor-lightbox-title="BFF-TN-001" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM0NSwidXJsIjoiaHR0cHM6XC9cL2Jpa2Vyc2Jyb3RoZXJob29kMXBlcmNlbnRtYy5jb21cL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA4XC9CRkYtVE4tMDAxLndlYnAiLCJzbGlkZXNob3ciOiJhbGwtYTZiZDRjMCJ9">
-                                                                    <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://bikersbrotherhood1percentmc.com/wp-content/uploads/2022/08/BFF-TN-001.webp" data-width="1280" data-height="853" alt=""></div>
+                                                                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="{{asset('front')}}/{{$data['section_img43']}}" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-a6bd4c0" data-elementor-lightbox-title="BFF-TN-001" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM0NSwidXJsIjoiaHR0cHM6XC9cL2Jpa2Vyc2Jyb3RoZXJob29kMXBlcmNlbnRtYy5jb21cL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA4XC9CRkYtVE4tMDAxLndlYnAiLCJzbGlkZXNob3ciOiJhbGwtYTZiZDRjMCJ9">
+                                                                    <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="{{asset('front')}}/{{$data['section_img43']}}" data-width="1280" data-height="853" alt=""></div>
                                                                     <div class="elementor-gallery-item__overlay"></div>
                                                                 </a>
-                                                                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="{{asset('front')}}/wp-content/uploads/2022/08/BFF-TN-008.webp" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-a6bd4c0" data-elementor-lightbox-title="BFF-TN-008" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM1NiwidXJsIjoiaHR0cHM6XC9cL2Jpa2Vyc2Jyb3RoZXJob29kMXBlcmNlbnRtYy5jb21cL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA4XC9CRkYtVE4tMDA4LndlYnAiLCJzbGlkZXNob3ciOiJhbGwtYTZiZDRjMCJ9">
-                                                                    <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://bikersbrotherhood1percentmc.com/wp-content/uploads/2022/08/BFF-TN-008.webp" data-width="1066" data-height="1600" alt=""></div>
+                                                                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="{{asset('front')}}/{{$data['section_img44']}}" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-a6bd4c0" data-elementor-lightbox-title="BFF-TN-008" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM1NiwidXJsIjoiaHR0cHM6XC9cL2Jpa2Vyc2Jyb3RoZXJob29kMXBlcmNlbnRtYy5jb21cL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA4XC9CRkYtVE4tMDA4LndlYnAiLCJzbGlkZXNob3ciOiJhbGwtYTZiZDRjMCJ9">
+                                                                    <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="{{asset('front')}}/{{$data['section_img44']}}" data-width="1066" data-height="1600" alt=""></div>
                                                                     <div class="elementor-gallery-item__overlay"></div>
                                                                 </a>
-                                                                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="{{asset('front')}}/wp-content/uploads/2022/08/BFF-TN-010.webp" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-a6bd4c0" data-elementor-lightbox-title="BFF-TN-010" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM1OCwidXJsIjoiaHR0cHM6XC9cL2Jpa2Vyc2Jyb3RoZXJob29kMXBlcmNlbnRtYy5jb21cL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA4XC9CRkYtVE4tMDEwLndlYnAiLCJzbGlkZXNob3ciOiJhbGwtYTZiZDRjMCJ9">
-                                                                    <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://bikersbrotherhood1percentmc.com/wp-content/uploads/2022/08/BFF-TN-010.webp" data-width="1280" data-height="853" alt=""></div>
+                                                                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="{{asset('front')}}/{{$data['section_img45']}}" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-a6bd4c0" data-elementor-lightbox-title="BFF-TN-010" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM1OCwidXJsIjoiaHR0cHM6XC9cL2Jpa2Vyc2Jyb3RoZXJob29kMXBlcmNlbnRtYy5jb21cL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA4XC9CRkYtVE4tMDEwLndlYnAiLCJzbGlkZXNob3ciOiJhbGwtYTZiZDRjMCJ9">
+                                                                    <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="{{asset('front')}}/{{$data['section_img45']}}" data-width="1280" data-height="853" alt=""></div>
                                                                     <div class="elementor-gallery-item__overlay"></div>
                                                                 </a>
-                                                                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="{{asset('front')}}/wp-content/uploads/2022/08/BFF-TN-003.webp" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-a6bd4c0" data-elementor-lightbox-title="BFF-TN-003" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM0NywidXJsIjoiaHR0cHM6XC9cL2Jpa2Vyc2Jyb3RoZXJob29kMXBlcmNlbnRtYy5jb21cL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA4XC9CRkYtVE4tMDAzLndlYnAiLCJzbGlkZXNob3ciOiJhbGwtYTZiZDRjMCJ9">
-                                                                    <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://bikersbrotherhood1percentmc.com/wp-content/uploads/2022/08/BFF-TN-003.webp" data-width="1280" data-height="853" alt=""></div>
+                                                                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="{{asset('front')}}/{{$data['section_img46']}}" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-a6bd4c0" data-elementor-lightbox-title="BFF-TN-003" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM0NywidXJsIjoiaHR0cHM6XC9cL2Jpa2Vyc2Jyb3RoZXJob29kMXBlcmNlbnRtYy5jb21cL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA4XC9CRkYtVE4tMDAzLndlYnAiLCJzbGlkZXNob3ciOiJhbGwtYTZiZDRjMCJ9">
+                                                                    <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="{{asset('front')}}/{{$data['section_img46']}}" data-width="1280" data-height="853" alt=""></div>
                                                                     <div class="elementor-gallery-item__overlay"></div>
                                                                 </a>
-                                                                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="{{asset('front')}}/wp-content/uploads/2022/08/BFF-TN-011.webp" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-a6bd4c0" data-elementor-lightbox-title="BFF-TN-011" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM1OSwidXJsIjoiaHR0cHM6XC9cL2Jpa2Vyc2Jyb3RoZXJob29kMXBlcmNlbnRtYy5jb21cL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA4XC9CRkYtVE4tMDExLndlYnAiLCJzbGlkZXNob3ciOiJhbGwtYTZiZDRjMCJ9">
-                                                                    <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://bikersbrotherhood1percentmc.com/wp-content/uploads/2022/08/BFF-TN-011.webp" data-width="1280" data-height="853" alt=""></div>
+                                                                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="{{asset('front')}}/{{$data['section_img47']}}" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-a6bd4c0" data-elementor-lightbox-title="BFF-TN-011" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM1OSwidXJsIjoiaHR0cHM6XC9cL2Jpa2Vyc2Jyb3RoZXJob29kMXBlcmNlbnRtYy5jb21cL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA4XC9CRkYtVE4tMDExLndlYnAiLCJzbGlkZXNob3ciOiJhbGwtYTZiZDRjMCJ9">
+                                                                    <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="{{asset('front')}}/{{$data['section_img47']}}" data-width="1280" data-height="853" alt=""></div>
                                                                     <div class="elementor-gallery-item__overlay"></div>
                                                                 </a>
-                                                                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="{{asset('front')}}/wp-content/uploads/2022/08/BFF-TN-012.webp" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-a6bd4c0" data-elementor-lightbox-title="BFF-TN-012" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM1NSwidXJsIjoiaHR0cHM6XC9cL2Jpa2Vyc2Jyb3RoZXJob29kMXBlcmNlbnRtYy5jb21cL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA4XC9CRkYtVE4tMDEyLndlYnAiLCJzbGlkZXNob3ciOiJhbGwtYTZiZDRjMCJ9">
-                                                                    <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://bikersbrotherhood1percentmc.com/wp-content/uploads/2022/08/BFF-TN-012.webp" data-width="1280" data-height="853" alt=""></div>
+                                                                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="{{asset('front')}}/{{$data['section_img48']}}" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-a6bd4c0" data-elementor-lightbox-title="BFF-TN-012" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM1NSwidXJsIjoiaHR0cHM6XC9cL2Jpa2Vyc2Jyb3RoZXJob29kMXBlcmNlbnRtYy5jb21cL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA4XC9CRkYtVE4tMDEyLndlYnAiLCJzbGlkZXNob3ciOiJhbGwtYTZiZDRjMCJ9">
+                                                                    <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="{{asset('front')}}/{{$data['section_img48']}}" data-width="1280" data-height="853" alt=""></div>
                                                                     <div class="elementor-gallery-item__overlay"></div>
                                                                 </a>
-                                                                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="{{asset('front')}}/wp-content/uploads/2022/08/BFF-TN-002.webp" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-a6bd4c0" data-elementor-lightbox-title="BFF-TN-002" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM0NiwidXJsIjoiaHR0cHM6XC9cL2Jpa2Vyc2Jyb3RoZXJob29kMXBlcmNlbnRtYy5jb21cL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA4XC9CRkYtVE4tMDAyLndlYnAiLCJzbGlkZXNob3ciOiJhbGwtYTZiZDRjMCJ9">
-                                                                    <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://bikersbrotherhood1percentmc.com/wp-content/uploads/2022/08/BFF-TN-002.webp" data-width="1280" data-height="853" alt=""></div>
+                                                                <a class="e-gallery-item elementor-gallery-item elementor-animated-content" href="{{asset('front')}}/{{$data['section_img49']}}" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="all-a6bd4c0" data-elementor-lightbox-title="BFF-TN-002" data-e-action-hash="#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6MTM0NiwidXJsIjoiaHR0cHM6XC9cL2Jpa2Vyc2Jyb3RoZXJob29kMXBlcmNlbnRtYy5jb21cL3dwLWNvbnRlbnRcL3VwbG9hZHNcLzIwMjJcLzA4XC9CRkYtVE4tMDAyLndlYnAiLCJzbGlkZXNob3ciOiJhbGwtYTZiZDRjMCJ9">
+                                                                    <div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="{{asset('front')}}/{{$data['section_img49']}}" data-width="1280" data-height="853" alt=""></div>
                                                                     <div class="elementor-gallery-item__overlay"></div>
                                                                 </a>
                                                             </div>

@@ -136,7 +136,7 @@
                         <span class="time"><i class="fas fa-clock"></i> {{date("d-M-Y", strtotime($val->end_date))}}</span>
                         <h3 class="timeline-header">{{$val->program->name_program}}</h3>
                         <div class="timeline-body">
-                            {{$val->description}}
+                            <?= nl2br($val->description) ?>
                         </div>
                     </div>
                 </div>
