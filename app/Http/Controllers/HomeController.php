@@ -60,11 +60,13 @@ class HomeController extends Controller
 
     public function checkin_submit(Request $request)
     {
-        $file = $request->image;
-        $filename = 'logo_chapter_' . date('YMdHis') . '.jpeg';
-        $path = 'logo_chapter/' . $filename;
 
-        Storage::disk('public')->put($path, file_get_contents($file));
+        $base64str = $request->image;
+        $image = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $base64str));
+        $filename = uniqid() . '.jpeg';
+
+        $path = 'attendance/' . $filename;
+        Storage::disk('public')->put($path, $image);
 
         dd('masuk');
     }
