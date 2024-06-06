@@ -54,6 +54,7 @@ Route::get('/landing_page/home', [CmsController::class, 'index'])->name('landing
 Route::get('/landing_page/home_form', [CmsController::class, 'home_form'])->name('landing_page.home.create');
 Route::post('/landing_page/home_submit', [CmsController::class, 'home_submit'])->name('landing_page.home.submit');
 Route::get('/landing_page/home_edit/{id}', [CmsController::class, 'home_edit'])->name('landing_page.home.edit');
+Route::put('/landing_page/{id}/home_update', [CmsController::class, 'home_update'])->name('landing_page.home.update');
 
 Route::get('/landing_page/about_us', [CmsController::class, 'about_us'])->name('landing_page.about_us');
 Route::get('/landing_page/about_us_form', [CmsController::class, 'about_form'])->name('landing_page.about_us.create');

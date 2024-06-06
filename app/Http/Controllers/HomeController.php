@@ -30,18 +30,20 @@ class HomeController extends Controller
     public function index()
     {
         $status = Auth::user()->status;
+        $current = date('Y-m-d H:i:00');
+
         if ($status != 1) :
             Auth::logout();
             return redirect()->route('login')->with('success', 'Akun anda belum terverfikasi, silahkan tunggu email verifikasi dari admin.');
         endif;
+
         $data['jumlah_member'] = User::where('status', 1)->count();
         $data['jumlah_chapter'] = MasterChapter::count();
         $data['jumlah_program'] = MasterProgram::count();
         $data['jumlah_activity'] = Activity::where('status', 1)->orderBy('start_date', 'ASC')->limit(5)->get();
-        $data['news_activity'] = Activity::where('status', 1)->orderBy('start_date', 'ASC')->first();
+        $data['news_activity'] = Activity::where('status', 1)->where('start_date', '>=', $current)->orderBy('start_date', 'ASC')->first();
         $data['status_checkin'] = 0;
 
-        $current = date('Y-m-d H:i');
         $start_activity = date("Y-m-d H:i", strtotime($data['news_activity']->start_date));
         $end_activity = date("Y-m-d H:i", strtotime($data['news_activity']->end_date));
 
@@ -62,7 +64,7 @@ class HomeController extends Controller
         $filename = 'logo_chapter_' . date('YMdHis') . '.jpeg';
         $path = 'logo_chapter/' . $filename;
 
-        Storage::disk('public')->put($path, $file);
+        Storage::disk('public')->put($path, file_get_contents($file));
 
         dd('masuk');
     }
