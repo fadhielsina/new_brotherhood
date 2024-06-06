@@ -9,7 +9,6 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
 
 class HomeController extends Controller
 {
@@ -60,7 +59,7 @@ class HomeController extends Controller
     public function checkin_submit(Request $request)
     {
         $file = $request->image;
-        $filename = 'logo_chapter_' . date('YMdHis') . '.png';
+        $filename = 'logo_chapter_' . date('YMdHis') . '.jpeg';
         $path = 'logo_chapter/' . $filename;
 
         Storage::disk('public')->put($path, file_get_contents($file));

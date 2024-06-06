@@ -20,8 +20,7 @@
     <div class="container">
         <h1 class="text-center">Capture webcam image with php and jquery - ItSolutionStuff.com</h1>
 
-        <form method="POST" action="{{route('home.checkin_submit')}}">
-            @csrf
+        <form method="POST" action="storeImage.php">
             <div class="row">
                 <div class="col-md-6">
                     <div id="my_camera"></div>
@@ -34,7 +33,7 @@
                 </div>
                 <div class="col-md-12 text-center">
                     <br />
-                    <button class="btn btn-success" type="submit">Submit</button>
+                    <button class="btn btn-success">Submit</button>
                 </div>
             </div>
         </form>
