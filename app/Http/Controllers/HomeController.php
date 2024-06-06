@@ -8,6 +8,8 @@ use App\Models\MasterProgram;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class HomeController extends Controller
 {
@@ -57,6 +59,17 @@ class HomeController extends Controller
 
     public function checkin_submit(Request $request)
     {
-        dd($request);
+        $img = $request->image;
+        $folderPath = "public/";
+        $image_parts = explode(";base64,", $img);
+        $image_type_aux = explode("image/", $image_parts[0]);
+        $image_type = $image_type_aux[1];
+        $image_base64 = base64_decode($image_parts[1]);
+        $rand_code = Str::random(6);
+        $fileName = time() . $rand_code . '.png';
+        $file = $folderPath . $fileName;
+        Storage::put($file, $image_base64);
+
+        dd('masuk');
     }
 }
