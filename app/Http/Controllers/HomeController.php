@@ -62,7 +62,7 @@ class HomeController extends Controller
         $filename = 'logo_chapter_' . date('YMdHis') . '.jpeg';
         $path = 'logo_chapter/' . $filename;
 
-        Storage::disk('public')->put($path, file_get_contents($filename));
+        Storage::disk('public')->put($path, $file);
 
         dd('masuk');
     }
