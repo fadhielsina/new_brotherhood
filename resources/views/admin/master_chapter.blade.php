@@ -41,6 +41,7 @@
 </x-adminlte-modal>
 {{-- Example button to open modal --}}
 <x-adminlte-button label="Create Chapter" data-toggle="modal" data-target="#modalPurple" class="bg-purple" />
+
 <div class="card">
     <div class="card-body">
         <table id="example2" class="table table-bordered table-striped">

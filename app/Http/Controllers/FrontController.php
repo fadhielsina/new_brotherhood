@@ -2,67 +2,66 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CmsAbout;
+use App\Models\CmsElPresidente;
+use App\Models\CmsHome;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
 {
     public function index()
     {
-        $data['section_title'] = "BIKERS BROTHERHOOD <strong>1%</strong> MC";
-        $data['section_body'] = "Berawal dari sekumpulan manusia yang mencintai dan menggunakan motor klasik buatan Amerika dan Eropa sehingga menjadi ciri khas klub Motor ini. Didirikan di Bandung pada 13 Juni 1988.
+        $query = CmsHome::where('status', 1)->first();
+        $data['section_title'] = $query->section_title;
+        $data['section_body'] = $query->section_body;
+        $data['section_img'] = $query->section_img;
 
-        <strong>1%</strong> Adalah 1% (One Percent) dari seluruh motorcycle club di Indonesia yang secara militan peduli terhadap bangsa.";
-        $data['section_img'] = "wp-content/uploads/2022/06/about-us-img-01.webp";
+        $data['section_title2'] = $query->section_title_dua;
+        $data['section_body2'] = $query->section_body_dua;
+        $data['section_img2'] = $query->section_img_dua;
 
-        $data['section_title2'] = "el presidente";
-        $data['section_body2'] = "EL PRESIDENTE merupakan pemimpin tertinggi dan pemegang keputusan tertinggi dalam kepengurusan Bikers Brotherhood <strong>1%</strong>  MC. EL PRESIDENTE diangkat dalam Musyawarah Persaudaraan setelah dipilih oleh seluruh anggota Bikers Brotherhood <strong>1%</strong>  MC untuk massa kepemimpinan selama 4 (empat) tahun dan bertanggung jawab kepada seluruh anggota melalui Musyawarah Persaudaraan.";
-        $data['section_img2'] = "wp-content/uploads/2023/01/1-scaled.webp";
-
-        $data['section_title3'] = "CHAMBER OF KLAN";
-        $data['section_body3'] = "CHAMBER OF KLAN Adalah lembaga non struktural yang Memelihara arah kebijakan, masukan dan pertimbangan kepada EL PRESIDENTE, dengan beranggotakan Ex-President";
-        $data['section_img3'] = "wp-content/uploads/2023/01/2-scaled.webp";
-        $data['section_img31'] = "wp-content/uploads/2023/01/3.png";
-        $data['section_img32'] = "wp-content/uploads/2023/01/4-scaled.webp";
+        $data['section_title3'] = $query->section_title_tiga;
+        $data['section_body3'] = $query->section_body_tiga;
+        $data['section_img3'] = $query->section_img_tiga;
+        $data['section_img31'] = $query->section_img_tiga_satu;
+        $data['section_img32'] = $query->section_img_tiga_dua;
 
         return view('front/index', compact('data'));
     }
 
     public function about_us()
     {
-        $data['section_title'] = "BIKERS BROTHERHOOD <strong>1%</strong> MC";
-        $data['section_body'] = "Klub Motor yang menjunjung tinggi nilai persaudaraan sebagai jalan hidup, tanpa membedakan suku, ras, agama dan bangsa dengan tujuan utama untuk kemanusiaan. Berawal dari sekumpulan manusia yang mencintai dan menggunakan motor klasik buatan Amerika dan Eropa sehingga menjadi ciri khas klub Motor ini. Didirikan di Bandung pada 13 Juni 1988.
+        $query = CmsAbout::where('status', 1)->first();
+        $data['section_title'] = $query->section_title;
+        $data['section_body'] = $query->section_body;
+        $data['section_img'] = $query->section_img;
 
-        <strong>1%</strong> Adalah 1% (One Percent) dari seluruh motorcycle club di Indonesia yang secara militan peduli terhadap bangsa.";
-        $data['section_img'] = "wp-content/uploads/2022/06/1.webp";
+        $data['section_title2'] = $query->section_title_dua;
 
-        $data['section_title2'] = "HUKUM PERSAUDARAAN";
+        $data['section_subtitle'] = $query->section_subtitle;
+        $data['section_subbody'] = $query->section_subbody;
 
-        $data['section_subtitle'] = "Brotherhood";
-        $data['section_subbody'] = "Persaudaraan Tanpa Batas.";
+        $data['section_subtitle2'] = $query->section_subtitle_dua;
+        $data['section_subbody2'] = $query->section_subbody_dua;
 
-        $data['section_subtitle2'] = "Loyal";
-        $data['section_subbody2'] = "Setia Terhadap BIKERS BROTHERHOOD 1% MC.";
+        $data['section_subtitle3'] = $query->section_subtitle_tiga;
+        $data['section_subbody3'] = $query->section_subbody_tiga;
 
-        $data['section_subtitle3'] = "Respect";
-        $data['section_subbody3'] = "Saling Menghormati Demi Keutuhan BIKERS BROTHERHOOD 1% MC.";
+        $data['section_subtitle4'] = $query->section_subtitle_empat;
+        $data['section_subbody4'] = $query->section_subbody_empat;
 
-        $data['section_subtitle4'] = "Honour";
-        $data['section_subbody4'] = "Menjungjung Tinggi Dan Menjaga Kehormatan BIKERS BROTHERHOOD 1% MC.";
-
-        $data['section_subtitle5'] = "Pride";
-        $data['section_subbody5'] = "Menjaga Kebanggaan Sebagai anggota BIKERS BROTHERHOOD 1% MC.";
+        $data['section_subtitle5'] = $query->section_subtitle_lima;
+        $data['section_subbody5'] = $query->section_subbody_lima;
 
         return view('front/about-us', compact('data'));
     }
 
     public function el_presidente()
     {
-        $data['section_body'] = "<li>EL PRESIDENTE merupakan pemimpin tertinggi dan pemegang keputusan tertinggi dalam kepengurusan Bikers Brotherhoodc <strong>1%</strong> MC.</li>
-        <li>EL PRESIDENTE diangkat dalam Musyawarah Persaudaraan setelah dipilih oleh seluruh anggota Bikers Brotherhood <strong>1%</strong> MC untuk masa kepemimpinan selama 4 (empat) tahun dan bertanggung jawab kepada seluruh anggota melalui Musyawarah Persaudaraan.</li>
-        <li>EL PRESIDENTE menjalankan sistem yang telah ditetapkan, berhak mengangkat dan memberhentikan seluruh anggota kepengurusan BIKERS BROTHERHOOD <strong>1%</strong> MC dan bertanggung jawab penuh terhadap kelangsungan kepengurusan Bikers Brotherhood <strong>1%</strong> MC Indonesia.</li>
-        <li>EL PRESIDENTE mempunyai hak dan kewajiban untuk mengambil setiap keputusan.</li>";
+        $query = CmsElPresidente::where('status', 1)->first();
+        $data['section_body'] = $query->section_body;
 
-        $data['section_img'] = "sang-pemimpin-01.webp";
+        $data['section_img'] = $query->section_img;
 
         return view('front/el-presidente', compact('data'));
     }

@@ -3167,7 +3167,7 @@ flexibility(document.documentElement);
 
                                                                 .elementor-105 .elementor-element.elementor-element-e14e457:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap,
                                                                 .elementor-105 .elementor-element.elementor-element-e14e457>.elementor-widget-wrap>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-                                                                    background-image: url("{{url('front/wp-content/uploads')}}/2022/06/{{$data['section_img']}}");
+                                                                    background-image: url("{{url('storage/front/el_presidente')}}/{{$data['section_img']}}");
                                                                     background-position: -2px 3px;
                                                                     background-repeat: no-repeat;
                                                                     background-size: cover;

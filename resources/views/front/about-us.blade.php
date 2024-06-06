@@ -3083,7 +3083,7 @@ flexibility(document.documentElement);
                                                 <div class="elementor-widget-wrap elementor-element-populated">
                                                     <div class="elementor-element elementor-element-618e15f animated-slow elementor-invisible elementor-widget elementor-widget-image" data-id="618e15f" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_mobile&quot;:&quot;fadeIn&quot;}" data-widget_type="image.default">
                                                         <div class="elementor-widget-container">
-                                                            <img decoding="async" width="768" height="768" src="{{asset('front')}}/{{$data['section_img']}}" class="attachment-large size-large wp-image-679" alt="" sizes="(max-width: 768px) 100vw, 768px" />
+                                                            <img decoding="async" width="768" height="768" src="{{asset('storage/front/about_us')}}/{{$data['section_img']}}" class="attachment-large size-large wp-image-679" alt="" sizes="(max-width: 768px) 100vw, 768px" />
                                                         </div>
                                                     </div>
                                                 </div>

@@ -3080,7 +3080,7 @@
                                 <div class="elementor-widget-wrap elementor-element-populated">
                                     <div class="elementor-element elementor-element-b74a0f7 elementor-widget elementor-widget-image" data-id="b74a0f7" data-element_type="widget" data-widget_type="image.default">
                                         <div class="elementor-widget-container">
-                                            <img decoding="async" width="980" height="683" src="{{asset('front')}}/{{$data['section_img']}}" class="attachment-large size-large wp-image-487" alt="" />
+                                            <img decoding="async" width="980" height="683" src="{{asset('storage/front/home')}}/{{$data['section_img']}}" class="attachment-large size-large wp-image-487" alt="" />
                                         </div>
                                     </div>
                                 </div>
@@ -3193,7 +3193,7 @@
                                                 <div class="elementor-widget-wrap elementor-element-populated">
                                                     <div class="elementor-element elementor-element-e5e3f29 elementor-widget elementor-widget-image" data-id="e5e3f29" data-element_type="widget" data-widget_type="image.default">
                                                         <div class="elementor-widget-container">
-                                                            <img loading="lazy" decoding="async" width="1449" height="2560" src="{{asset('front')}}/{{$data['section_img2']}}" class="attachment-full size-full wp-image-1957" alt="" sizes="(max-width: 1449px) 100vw, 1449px" />
+                                                            <img loading="lazy" decoding="async" width="1449" height="2560" src="{{asset('storage/front/home')}}/{{$data['section_img2']}}" class="attachment-full size-full wp-image-1957" alt="" sizes="(max-width: 1449px) 100vw, 1449px" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -3260,7 +3260,7 @@
                                 <div class="elementor-widget-wrap elementor-element-populated">
                                     <div class="elementor-element elementor-element-485ba8d elementor-invisible elementor-widget elementor-widget-image" data-id="485ba8d" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:1000}" data-widget_type="image.default">
                                         <div class="elementor-widget-container">
-                                            <img loading="lazy" decoding="async" width="1449" height="2560" src="{{asset('front')}}/{{$data['section_img3']}}" class="attachment-full size-full wp-image-1958" alt="" sizes="(max-width: 1449px) 100vw, 1449px" />
+                                            <img loading="lazy" decoding="async" width="1449" height="2560" src="{{asset('storage/front/home')}}/{{$data['section_img3']}}" class="attachment-full size-full wp-image-1958" alt="" sizes="(max-width: 1449px) 100vw, 1449px" />
                                         </div>
                                     </div>
                                 </div>
@@ -3269,7 +3269,7 @@
                                 <div class="elementor-widget-wrap elementor-element-populated">
                                     <div class="elementor-element elementor-element-c3563c6 elementor-invisible elementor-widget elementor-widget-image" data-id="c3563c6" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:1500}" data-widget_type="image.default">
                                         <div class="elementor-widget-container">
-                                            <img loading="lazy" decoding="async" width="2212" height="3908" src="{{asset('front')}}/{{$data['section_img31']}}" class="attachment-full size-full wp-image-1959" alt="" sizes="(max-width: 2212px) 100vw, 2212px" />
+                                            <img loading="lazy" decoding="async" width="2212" height="3908" src="{{asset('storage/front/home')}}/{{$data['section_img31']}}" class="attachment-full size-full wp-image-1959" alt="" sizes="(max-width: 2212px) 100vw, 2212px" />
                                         </div>
                                     </div>
                                 </div>
@@ -3278,7 +3278,7 @@
                                 <div class="elementor-widget-wrap elementor-element-populated">
                                     <div class="elementor-element elementor-element-232ead2 elementor-invisible elementor-widget elementor-widget-image" data-id="232ead2" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:2000}" data-widget_type="image.default">
                                         <div class="elementor-widget-container">
-                                            <img loading="lazy" decoding="async" width="1449" height="2560" src="{{asset('front')}}/{{$data['section_img32']}}" class="attachment-full size-full wp-image-1960" alt="" sizes="(max-width: 1449px) 100vw, 1449px" />
+                                            <img loading="lazy" decoding="async" width="1449" height="2560" src="{{asset('storage/front/home')}}/{{$data['section_img32']}}" class="attachment-full size-full wp-image-1960" alt="" sizes="(max-width: 1449px) 100vw, 1449px" />
                                         </div>
                                     </div>
                                 </div>

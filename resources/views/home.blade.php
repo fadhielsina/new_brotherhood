@@ -104,12 +104,16 @@
                         <h3 class="card-title">News Activity</h3>
                     </div>
                     <div class="card-body">
-                        <strong><i class="far fa-file-alt mr-1"></i> BROTHERHOOD FOR FAITH</strong>
-                        <small class="badge badge-danger"><i class="far fa-clock"></i> In 2 Days</small>
-                        <p class="text-muted">Program Kerja BFF merupakan implementasi Pengabdian nyata kepada Keluarga Besar BB1%MC</p>
+                        <strong><i class="far fa-file-alt mr-1"></i> {{$data['news_activity']->program->name_program}}</strong>
+                        <small class="badge badge-danger"><i class="far fa-clock"></i> {{date("d-M-Y H:i:s", strtotime($data['news_activity']->start_date))}} </small>
+                        <p class="text-muted"><?= nl2br($data['news_activity']->description) ?></p>
                         <hr>
                         <div class="text-center">
-                            <button class="btn btn-danger disabled">Attend</button>
+                            @if($data['status_checkin'] == 1)
+                            <a href="{{route('home.checkin')}}" class="btn btn-primary">Attend</a>
+                            @else
+                            <a href="{{route('home.checkin')}}" class="btn btn-danger disabled">Attend</a>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -118,36 +122,33 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="card card-primary">
-        <div class="card-header mb-2">
-            <h3 class="card-title">Info Kegiatan</h3>
-        </div>
-        <div class="col-md-12">
-            <div class="timeline">
-                <!-- Start Looping -->
-                @foreach($data['jumlah_activity'] as $val)
-                <div class="time-label">
-                    <span class="bg-red">{{date("d-M-Y", strtotime($val->start_date))}}</span>
-                </div>
-                <div>
-                    <i class="fas fa-envelope bg-blue"></i>
-                    <div class="timeline-item">
-                        <span class="time"><i class="fas fa-clock"></i> {{date("d-M-Y", strtotime($val->end_date))}}</span>
-                        <h3 class="timeline-header">{{$val->program->name_program}}</h3>
-                        <div class="timeline-body">
-                            <?= nl2br($val->description) ?>
-                        </div>
+<div class="card card-primary">
+    <div class="card-header mb-2">
+        <h3 class="card-title">Info Kegiatan</h3>
+    </div>
+    <div class="col-md-12">
+        <div class="timeline">
+            <!-- Start Looping -->
+            @foreach($data['jumlah_activity'] as $val)
+            <div class="time-label">
+                <span class="bg-red">{{date("d-M-Y", strtotime($val->start_date))}}</span>
+            </div>
+            <div>
+                <i class="fas fa-envelope bg-blue"></i>
+                <div class="timeline-item">
+                    <span class="time"><i class="fas fa-clock"></i> {{$val->status_activity}}</span>
+                    <h3 class="timeline-header">{{$val->program->name_program}}</h3>
+                    <div class="timeline-body">
+                        <?= nl2br($val->description) ?>
                     </div>
                 </div>
-                @endforeach
-                <!-- End Looping -->
-                <div>
-                    <i class="fas fa-clock bg-gray"></i>
-                </div>
+            </div>
+            @endforeach
+            <!-- End Looping -->
+            <div>
+                <i class="fas fa-clock bg-gray"></i>
             </div>
         </div>
-
     </div>
 </div>
 @endrole

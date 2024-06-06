@@ -323,18 +323,18 @@ return [
                     'text' => 'El Presidente',
                     'url' => 'landing_page/el_presidente',
                 ],
-                [
-                    'text' => '1% Program',
-                    'url' => 'landing_page/one_program',
-                ],
-                [
-                    'text' => 'Our Chapter',
-                    'url' => 'landing_page/our_chapter',
-                ],
-                [
-                    'text' => 'Blog',
-                    'url' => 'landing_page/blog',
-                ],
+                // [
+                //     'text' => '1% Program',
+                //     'url' => 'landing_page/one_program',
+                // ],
+                // [
+                //     'text' => 'Our Chapter',
+                //     'url' => 'landing_page/our_chapter',
+                // ],
+                // [
+                //     'text' => 'Blog',
+                //     'url' => 'landing_page/blog',
+                // ],
             ]
         ],
         [
@@ -380,9 +380,9 @@ return [
             'can' => 'admin'
         ],
         [
-            'text' => 'Create News Activity',
-            'url' => 'admin/master_chapter',
-            'icon' => 'fas fa-fw fa-edit',
+            'text' => 'Request News Activity',
+            'url' => 'news_activity_request',
+            'icon' => 'fas fa-fw fa-table',
             'can' => 'admin'
         ],
         [
@@ -443,17 +443,17 @@ return [
             'files' => [
                 [
                     'type' => 'js',
-                    'asset' => false,
+                    'asset' => true,
                     'location' => 'vendor/datatables/js/jquery.dataTables.min.js',
                 ],
                 [
                     'type' => 'js',
-                    'asset' => false,
+                    'asset' => true,
                     'location' => 'vendor/datatables/js/dataTables.bootstrap4.min.js',
                 ],
                 [
                     'type' => 'css',
-                    'asset' => false,
+                    'asset' => true,
                     'location' => 'vendor/datatables/css/dataTables.bootstrap4.min.css',
                 ],
             ],

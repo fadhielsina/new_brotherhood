@@ -12,6 +12,6 @@ class MasterChapter extends Model
 
     public function user()
     {
-        return $this->hasOne(MasterChapter::class);
+        return $this->hasOne(User::class);
     }
 }

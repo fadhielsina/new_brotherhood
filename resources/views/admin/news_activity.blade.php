@@ -59,6 +59,7 @@
                     <th>Start Event</th>
                     <th>End Event</th>
                     <th>Description</th>
+                    <th>Activity Status</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -70,6 +71,7 @@
                     <td>{{$val->start_date}}</td>
                     <td>{{$val->end_date}}</td>
                     <td><?= nl2br($val->description) ?></td>
+                    <td><button class="btn btn-block btn-outline-success btn-sm">{{$val->status_activity}}</button></td>
                     <td>
                         <a href="{{ route('news_activity.edit', $val->id) }}" class="btn btn-sm btn-info"><i class="fas fa-edit"></i></a>
                         <button type="submit" class="btn btn-sm btn-danger" id="delete_data" value="{{$val->id}}"><i class="fas fa-trash"></i></button>

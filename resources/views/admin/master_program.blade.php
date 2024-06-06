@@ -9,6 +9,11 @@
 
 @section('content')
 @include('session')
+<?php $heads = [
+    'Program Name',
+    'Action',
+]; ?>
+
 {{-- Themed --}}
 <x-adminlte-modal id="modalPurple" title="Form" theme="purple" icon="fas fa-plus" size='lg' disable-animations>
     <form method="post" action="{{ route('master_program.store') }}" enctype="multipart/form-data">
@@ -27,65 +32,27 @@
     </form>
 </x-adminlte-modal>
 {{-- Example button to open modal --}}
+
 <x-adminlte-button label="Create Program" data-toggle="modal" data-target="#modalPurple" class="bg-purple" />
 <div class="card">
     <div class="card-body">
-        <table id="example2" class="table table-bordered table-striped">
-            <thead>
-                <tr>
-                    <th>Program Name</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($program as $val)
-                <tr>
-                    <td>{{$val->name_program}}</td>
-                    <td>
-                        <a href="{{ route('master_program.edit', $val->id) }}" class="btn btn-sm btn-info"><i class="fas fa-edit"></i></a>
-                        <button type="submit" class="btn btn-sm btn-danger" id="delete_data" value="{{$val->id}}"><i class="fas fa-trash"></i></button>
-                    </td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
+        <x-adminlte-datatable id="table1" :heads="$heads">
+            @foreach($program as $val)
+            <tr>
+                <td>{{$val->name_program}}</td>
+                <td>
+                    <a href="{{ route('master_program.edit', $val->id) }}" class="btn btn-sm btn-info"><i class="fas fa-edit"></i></a>
+                    <button type="submit" class="btn btn-sm btn-danger" id="delete_data" value="{{$val->id}}"><i class="fas fa-trash"></i></button>
+                </td>
+            </tr>
+            @endforeach
+        </x-adminlte-datatable>
     </div>
 
 </div>
 @stop
 
 @section('js')
-<script src="vendor/datatables-plugins/buttons/js/dataTables.buttons.min.js"></script>
-<script src="vendor/datatables-plugins/buttons/js/buttons.bootstrap4.min.js"></script>
-<script src="vendor/datatables-plugins/buttons/js/buttons.html5.min.js"></script>
-<script src="vendor/datatables-plugins/buttons/js/buttons.print.min.js"></script>
-<script src="vendor/datatables-plugins/jszip/jszip.min.js"></script>
-<script src="vendor/datatables-plugins/pdfmake/pdfmake.min.js"></script>
-<script src="vendor/datatables-plugins/pdfmake/vfs_fonts.js"></script>
-
-<script>
-    $(function() {
-        $("#example1").DataTable({
-            "responsive": true,
-            "lengthChange": false,
-            "autoWidth": false,
-            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-        $('#example2').DataTable({
-            "paging": true,
-            "lengthChange": true,
-            "searching": true,
-            "ordering": true,
-            "info": true,
-            "autoWidth": false,
-            "responsive": true,
-            "order": [
-                [2, 'asc']
-            ],
-        });
-    });
-</script>
-
 <script>
     $(document).on('click', '#delete_data', function() {
         // function

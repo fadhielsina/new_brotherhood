@@ -14,7 +14,7 @@ class NewsActivityController extends Controller
      */
     public function index()
     {
-        $activity = Activity::get();
+        $activity = Activity::where('status', 1)->get();
         $program = MasterProgram::get();
         return view('admin/news_activity', compact('activity', 'program'));
     }

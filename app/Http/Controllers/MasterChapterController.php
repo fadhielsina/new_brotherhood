@@ -74,7 +74,6 @@ class MasterChapterController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $logo_old = MasterChapter::find($id)->logo_chapter;
 
         $data = [
             'name_chapter' => $request->name_chapter,
@@ -92,8 +91,6 @@ class MasterChapterController extends Controller
             $path = 'logo_chapter/' . $filename;
             Storage::disk('public')->put($path, file_get_contents($file));
             $data['logo_chapter'] = $filename;
-        else :
-            $data['logo_chapter'] = $logo_old;
         endif;
 
         MasterChapter::where('id', $id)->update($data);
