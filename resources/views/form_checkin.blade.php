@@ -1,31 +1,13 @@
-<!doctype html>
-
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>WebcamJS Test Page</title>
+    <title>Capture webcam image with php and jquery - ItSolutionStuff.com</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
     <style type="text/css">
-        body {
-            font-family: Helvetica, sans-serif;
-        }
-
-        h2,
-        h3 {
-            margin-top: 0;
-        }
-
-        form {
-            margin-top: 15px;
-        }
-
-        form>input {
-            margin-right: 15px;
-        }
-
         #results {
-            float: right;
-            margin: 20px;
             padding: 20px;
             border: 1px solid;
             background: #ccc;
@@ -34,41 +16,45 @@
 </head>
 
 <body>
-    <div id="results">Your captured image will appear here...</div>
 
-    <h1>WebcamJS Test Page</h1>
-    <h3>Demonstrates simple 320x240 capture &amp; display</h3>
+    <div class="container">
+        <h1 class="text-center">Capture webcam image with php and jquery - ItSolutionStuff.com</h1>
 
-    <div id="my_camera"></div>
-
-    <!-- First, include the Webcam.js JavaScript Library -->
-    <script type="text/javascript" src="{{asset('/assets')}}/webcam.min.js"></script>
+        <form method="POST" action="{{route('home.checkin_submit')}}">
+            @csrf
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="my_camera"></div>
+                    <br />
+                    <input type=button value="Take Snapshot" onClick="take_snapshot()">
+                    <input type="hidden" name="image" class="image-tag">
+                </div>
+                <div class="col-md-6">
+                    <div id="results">Your captured image will appear here...</div>
+                </div>
+                <div class="col-md-12 text-center">
+                    <br />
+                    <button class="btn btn-success" type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
 
     <!-- Configure a few settings and attach camera -->
     <script language="JavaScript">
         Webcam.set({
-            width: 320,
-            height: 240,
+            width: 490,
+            height: 390,
             image_format: 'jpeg',
             jpeg_quality: 90
         });
+
         Webcam.attach('#my_camera');
-    </script>
 
-    <!-- A button for taking snaps -->
-    <form>
-        <input type=button value="Take Snapshot" onClick="take_snapshot()">
-    </form>
-
-    <!-- Code to handle taking the snapshot and displaying it locally -->
-    <script language="JavaScript">
         function take_snapshot() {
-            // take snapshot and get image data
             Webcam.snap(function(data_uri) {
-                // display results in page
-                document.getElementById('results').innerHTML =
-                    '<h2>Here is your image:</h2>' +
-                    '<img src="' + data_uri + '"/>';
+                $(".image-tag").val(data_uri);
+                document.getElementById('results').innerHTML = '<img src="' + data_uri + '"/>';
             });
         }
     </script>

@@ -47,7 +47,7 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/home_checkin', [HomeController::class, 'checkin'])->name('home.checkin');
-Route::get('/home_checkin_submit', [HomeController::class, 'checkin_submit'])->name('home.checkin_submit');
+Route::post('/home_checkin_submit', [HomeController::class, 'checkin_submit'])->name('home.checkin_submit');
 
 // CMS
 Route::get('/landing_page/home', [CmsController::class, 'index'])->name('landing_page.home');
