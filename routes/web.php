@@ -89,6 +89,7 @@ Route::group(['middleware' => ['can:admin']], function () {
 
     Route::delete('/landing_page/{id}/blog_destroy', [CmsController::class, 'blog_destroy'])->name('landing_page.blog.destroy');
     Route::get('/landing_page/blog_posting/{id}', [CmsController::class, 'blog_posting'])->name('landing_page.blog.posting');
+    Route::get('/landing_page/blog_unposting/{id}', [CmsController::class, 'blog_unposting'])->name('landing_page.blog.unposting');
 
     Route::resource('master_member', MasterMemberController::class);
     Route::resource('member_request', MemberRequestController::class);

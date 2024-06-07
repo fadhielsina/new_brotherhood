@@ -629,4 +629,10 @@ class CmsController extends Controller
         MasterBlog::where('id', $id)->update(["status" => 1]);
         return redirect()->route('landing_page.blog')->with('success', 'Data berhasil di publish');
     }
+
+    public function blog_unposting(string $id)
+    {
+        MasterBlog::where('id', $id)->update(["status" => 0]);
+        return redirect()->route('landing_page.blog')->with('success', 'Data berhasil di publish');
+    }
 }

@@ -40,6 +40,7 @@
                         <button type="submit" class="btn btn-danger btn-sm delete" data-toggle="tooltip" data-placement="top" title="delete"><span class="fa fa-trash"></span></button>
                     </form>
                     <a href="{{ route('landing_page.blog.posting', $val->id) }}" class="btn btn-sm btn-primary mt-2" onclick="return confirm('Anda Yakin?')">Publish</a>
+                    <a href="{{ route('landing_page.blog.unposting', $val->id) }}" class="btn btn-sm btn-warning mt-2" onclick="return confirm('Anda Yakin?')">Un Publish</a>
                     @endrole
                 </td>
             </tr>
