@@ -3474,25 +3474,19 @@ flexibility(document.documentElement);
                                                             <div class="elementor-image-carousel-wrapper swiper" dir="ltr">
                                                                 <div class="elementor-image-carousel swiper-wrapper" aria-live="off">
                                                                     <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 of 7">
-                                                                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{asset('front')}}/wp-content/uploads/2022/08/el-presidente-006-768x768.webp" alt="el-presidente-006" /></figure>
+                                                                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{url('storage/front/el_presidente')}}/{{$data['section_img2']}}" alt="el-presidente-006" /></figure>
                                                                     </div>
                                                                     <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="2 of 7">
-                                                                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{asset('front')}}/wp-content/uploads/2022/08/el-presidente-003-768x768.webp" alt="el-presidente-003" /></figure>
+                                                                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{url('storage/front/el_presidente')}}/{{$data['section_img3']}}" alt="el-presidente-003" /></figure>
                                                                     </div>
                                                                     <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="3 of 7">
-                                                                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{asset('front')}}/wp-content/uploads/2022/08/el-presidente-005-768x768.webp" alt="el-presidente-005" /></figure>
+                                                                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{url('storage/front/el_presidente')}}/{{$data['section_img4']}}" alt="el-presidente-005" /></figure>
                                                                     </div>
                                                                     <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 of 7">
-                                                                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{asset('front')}}/wp-content/uploads/2022/08/el-presidente-004-768x768.webp" alt="el-presidente-004" /></figure>
+                                                                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{url('storage/front/el_presidente')}}/{{$data['section_img5']}}" alt="el-presidente-004" /></figure>
                                                                     </div>
-                                                                    <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="5 of 7">
-                                                                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{asset('front')}}/wp-content/uploads/2022/08/el-presidente-002-768x768.webp" alt="el-presidente-002" /></figure>
-                                                                    </div>
-                                                                    <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="6 of 7">
-                                                                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{asset('front')}}/wp-content/uploads/2022/08/el-presidente-001-768x768.webp" alt="el-presidente-001" /></figure>
-                                                                    </div>
-                                                                    <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="7 of 7">
-                                                                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{asset('front')}}/wp-content/uploads/2022/08/el-presidente-007-768x768.webp" alt="el-presidente-007" /></figure>
+                                                                    <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="5 of 5">
+                                                                        <figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image" src="{{url('storage/front/el_presidente')}}/{{$data['section_img6']}}" alt="el-presidente-002" /></figure>
                                                                     </div>
                                                                 </div>
                                                                 <div class="elementor-swiper-button elementor-swiper-button-prev" role="button" tabindex="0">

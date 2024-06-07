@@ -157,6 +157,10 @@
 @include('dashboard')
 @endrole
 
+@role("member")
+@include('dashboard')
+@endrole
+
 @stop
 
 @section('css')

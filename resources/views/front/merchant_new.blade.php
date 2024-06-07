@@ -3085,13 +3085,13 @@
                                             <div class="elementor-post__card">
                                                 <a class="elementor-post__thumbnail__link" href="#">
                                                     <div class="elementor-post__thumbnail">
-                                                        <img decoding="async" width="300" height="300" src="${value.image}" class="attachment-medium size-medium wp-image-1807" alt="" srcset="${value.image} 300w, ${value.image} 1024w, ${value.image} 150w, ${value.image} 768w" sizes="(max-width: 300px) 100vw, 300px" />
+                                                        <img decoding="async" width="300" height="300" src="<?= url('storage/merchant') ?>/${value.picture}" class="attachment-medium size-medium wp-image-1807" alt="" sizes="(max-width: 300px) 100vw, 300px" />
                                                     </div>
                                                 </a>
                                                 <div class="elementor-post__badge">Rp ${value.price.toLocaleString()}</div>
                                                 <div class="elementor-post__text">
                                                     <h3 class="elementor-post__title">
-                                                    ${value.name}
+                                                    ${value.name_product}
                                                     </h3>
                                                     <div class="elementor-post__excerpt">
                                                         <p>${value.description}</p>
@@ -3125,7 +3125,7 @@
                                         if (value != null) {
                                             let newDiv = document.createElement('tr');
                                             newDiv.innerHTML = `
-                                                <th>${value.name}</th>
+                                                <th>${value.name_product}</th>
                                                 <th>${value.price.toLocaleString()}</th>
                                                 <th><textarea id="deskripsi[]" name="deskripsi[]" placeholder="Catatan"></textarea></th>
                                                 <th>
@@ -3134,7 +3134,7 @@
                                                     <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
                                                 </th>
                                                 <input type="hidden" id="id[]" name="id[]" value="${value.id}">
-                                                <input type="hidden" id="name[]" name="name[]" value="${value.name}">
+                                                <input type="hidden" id="name[]" name="name[]" value="${value.name_product}">
                                                 <input type="hidden" id="qty[]" name="qty[]" value="${value.quantity}">
                                                 <input type="hidden" id="price[]" name="price[]" value="${value.price.toLocaleString()}">
                                                 <input type="hidden" id="total" name="total" value="${totalPrice.toLocaleString()}">`;

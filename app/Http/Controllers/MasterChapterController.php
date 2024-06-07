@@ -65,7 +65,7 @@ class MasterChapterController extends Controller
      */
     public function edit(string $id)
     {
-        $data = MasterChapter::find($id);
+        $data = MasterChapter::where('id', $id)->first();
         return view('admin/form_master_chapter', compact('data'));
     }
 

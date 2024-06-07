@@ -47,7 +47,7 @@ class MasterProgramController extends Controller
      */
     public function edit(string $id)
     {
-        $data = MasterProgram::find($id);
+        $data = MasterProgram::where('id', $id)->first();
         return view('admin/form_master_program', compact('data'));
     }
 

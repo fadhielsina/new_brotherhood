@@ -3050,98 +3050,31 @@ flexibility(document.documentElement);
                                                             <link rel="stylesheet" href="{{asset('front')}}/wp-content/plugins/elementor-pro/assets/css/widget-posts.min.css">
                                                             <div class="elementor-posts-container elementor-posts elementor-posts--skin-cards elementor-grid">
                                                                 <!-- Looping Blog -->
+                                                                @foreach($data as $val)
                                                                 <article class="elementor-post elementor-grid-item post-1806 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
                                                                     <div class="elementor-post__card">
-                                                                        <a class="elementor-post__thumbnail__link" href="{{asset('front')}}/2022/10/13/34-tahun-bikers-brotherhood-1-mc-ajak-seluruh-bikers-kembali-turun-kejalan/index.html">
-                                                                            <div class="elementor-post__thumbnail"><img decoding="async" width="300" height="300" src="{{asset('front')}}/wp-content/uploads/2022/10/WhatsApp-Image-2022-10-11-at-8.45.55-PM-300x300.webp" class="attachment-medium size-medium wp-image-1807" alt="" sizes="(max-width: 300px) 100vw, 300px" /></div>
+                                                                        <a class="elementor-post__thumbnail__link">
+                                                                            <div class="elementor-post__thumbnail"><img decoding="async" width="300" height="300" src="{{ asset('storage/front/blog/'.$val->picture.'') }}" class="attachment-medium size-medium wp-image-1807" alt="" sizes="(max-width: 300px) 100vw, 300px" /></div>
                                                                         </a>
-                                                                        <div class="elementor-post__badge">Uncategorized</div>
+                                                                        <div class="elementor-post__badge">{{$val->event_name}}</div>
                                                                         <div class="elementor-post__text">
                                                                             <h3 class="elementor-post__title">
                                                                                 <a href="{{asset('front')}}/2022/10/13/34-tahun-bikers-brotherhood-1-mc-ajak-seluruh-bikers-kembali-turun-kejalan/index.html">
-                                                                                    34 Tahun Bikers Brotherhood 1% MC Ajak Seluruh Bikers Kembali Turun Kejalan </a>
+                                                                                    {{$val->title}} </a>
                                                                             </h3>
                                                                             <div class="elementor-post__excerpt">
-                                                                                <p>BANDUNG.- Ulang tahun Bikers Brotherhood 1% MC Indonesia ke 34 tahun mengembalikan semangat para bikers untuk kembali mengaspal setelah kurang lebih tiga tahun di kegiatan</p>
+                                                                                <p><?= substr(nl2br($val->description), 0, 200) ?> ...</p>
                                                                             </div>
                                                                             <a class="elementor-post__read-more" href="{{asset('front')}}/2022/10/13/34-tahun-bikers-brotherhood-1-mc-ajak-seluruh-bikers-kembali-turun-kejalan/index.html">
                                                                                 Read More » </a>
                                                                         </div>
                                                                         <div class="elementor-post__meta-data">
                                                                             <span class="elementor-post-date">
-                                                                                October 13, 2022 </span>
+                                                                                {{$val->created_at}} </span>
                                                                         </div>
                                                                     </div>
                                                                 </article>
-                                                                <article class="elementor-post elementor-grid-item post-1806 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
-                                                                    <div class="elementor-post__card">
-                                                                        <a class="elementor-post__thumbnail__link" href="{{asset('front')}}/2022/08/26/bakti-untuk-negeri-bikers-brotherhood-1-mc-central-java-chapter-gelar-upacara-hut-ke-77-ri-di-ladang-tembakau-bersama-petani/index.html">
-                                                                            <div class="elementor-post__thumbnail"><img decoding="async" width="300" height="300" src="{{asset('front')}}/wp-content/uploads/2022/08/upacara-hut-RI-77-300x300.webp" class="attachment-medium size-medium wp-image-1601" alt="" sizes="(max-width: 300px) 100vw, 300px" /></div>
-                                                                        </a>
-                                                                        <div class="elementor-post__badge">BROTHERHOOD FOR NATURE</div>
-                                                                        <div class="elementor-post__text">
-                                                                            <h3 class="elementor-post__title">
-                                                                                <a href="{{asset('front')}}/2022/08/26/bakti-untuk-negeri-bikers-brotherhood-1-mc-central-java-chapter-gelar-upacara-hut-ke-77-ri-di-ladang-tembakau-bersama-petani/index.html">
-                                                                                    Bakti Untuk negeri: Bikers brotherhood 1% MC Central Java Chapter Gelar Upacara HUT ke-77 RI di Ladang Tembakau Bersama Petani </a>
-                                                                            </h3>
-                                                                            <div class="elementor-post__excerpt">
-                                                                                <p>Bikers brotherhood 1% MC Central Java Chapter merayakan HUT Kemerdekaan RI ke-77 dengan cara unik yakni mengadakan upcara bersama puluhan petani Desa Wonosari, Kecamatan Bulu,</p>
-                                                                            </div>
-                                                                            <a class="elementor-post__read-more" href="{{asset('front')}}/2022/08/26/bakti-untuk-negeri-bikers-brotherhood-1-mc-central-java-chapter-gelar-upacara-hut-ke-77-ri-di-ladang-tembakau-bersama-petani/index.html">
-                                                                                Read More » </a>
-                                                                        </div>
-                                                                        <div class="elementor-post__meta-data">
-                                                                            <span class="elementor-post-date">
-                                                                                August 26, 2022 </span>
-                                                                        </div>
-                                                                    </div>
-                                                                </article>
-                                                                <article class="elementor-post elementor-grid-item post-1806 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
-                                                                    <div class="elementor-post__card">
-                                                                        <a class="elementor-post__thumbnail__link" href="{{asset('front')}}/2022/06/14/pangandaran-bikers-brotherhood-1-mc-indonesia-kumpulkan-lebih-dari-1-000-bikers-dari-seluruh-penjuru-negeri/index.html">
-                                                                            <div class="elementor-post__thumbnail"><img loading="lazy" decoding="async" width="300" height="300" src="{{asset('front')}}/wp-content/uploads/2022/06/Sacred-Run-7-300x300.webp" class="attachment-medium size-medium wp-image-1118" alt="" sizes="(max-width: 300px) 100vw, 300px" /></div>
-                                                                        </a>
-                                                                        <div class="elementor-post__badge">EVENT TOURING</div>
-                                                                        <div class="elementor-post__text">
-                                                                            <h3 class="elementor-post__title">
-                                                                                <a href="{{asset('front')}}/2022/06/14/pangandaran-bikers-brotherhood-1-mc-indonesia-kumpulkan-lebih-dari-1-000-bikers-dari-seluruh-penjuru-negeri/index.html">
-                                                                                    PANGANDARAN, Bikers Brotherhood 1% MC Indonesia kumpulkan lebih dari 1.000 bikers dari seluruh penjuru negeri </a>
-                                                                            </h3>
-                                                                            <div class="elementor-post__excerpt">
-                                                                                <p>Lewat acara Sacred Run ke 7 di Pantai Madasari Kabupaten Pangandaran, Jawa Barat, Sabtu (26/1/2022) lalu.Sacred Run adalah kegiatan touring dan penyematan wings kehormatan bagi</p>
-                                                                            </div>
-                                                                            <a class="elementor-post__read-more" href="{{asset('front')}}/2022/06/14/pangandaran-bikers-brotherhood-1-mc-indonesia-kumpulkan-lebih-dari-1-000-bikers-dari-seluruh-penjuru-negeri/index.html">
-                                                                                Read More » </a>
-                                                                        </div>
-                                                                        <div class="elementor-post__meta-data">
-                                                                            <span class="elementor-post-date">
-                                                                                June 14, 2022 </span>
-                                                                        </div>
-                                                                    </div>
-                                                                </article>
-                                                                <article class="elementor-post elementor-grid-item post-1806 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
-                                                                    <div class="elementor-post__card">
-                                                                        <a class="elementor-post__thumbnail__link" href="{{asset('front')}}/2022/06/08/safari-ramadan-bikers-brohterhood-1-mc-west-java-chapter-berbagi-kebahagian-dengan-masyarakat/index.html">
-                                                                            <div class="elementor-post__thumbnail"><img loading="lazy" decoding="async" width="300" height="300" src="{{asset('front')}}/wp-content/uploads/2022/06/Berbagi-kebahagian-fe-image-001-300x300.png" class="attachment-medium size-medium wp-image-1007" alt="" sizes="(max-width: 300px) 100vw, 300px" /></div>
-                                                                        </a>
-                                                                        <div class="elementor-post__badge">BROTHERHOOD FOR FAITH</div>
-                                                                        <div class="elementor-post__text">
-                                                                            <h3 class="elementor-post__title">
-                                                                                <a href="{{asset('front')}}/2022/06/08/safari-ramadan-bikers-brohterhood-1-mc-west-java-chapter-berbagi-kebahagian-dengan-masyarakat/index.html">
-                                                                                    Safari Ramadan Bikers Brohterhood 1% MC West Java Chapter Berbagi Kebahagian Dengan Masyarakat </a>
-                                                                            </h3>
-                                                                            <div class="elementor-post__excerpt">
-                                                                                <p>CIANJUR.- Bikers Brotherhood 1% MC West Java Chapter berbagi kebahagian bersama dhuafa, anak yatim dan santri di sembilan Checkpoint se &#8211; Jawa Barat, mulai dari</p>
-                                                                            </div>
-                                                                            <a class="elementor-post__read-more" href="{{asset('front')}}/2022/06/08/safari-ramadan-bikers-brohterhood-1-mc-west-java-chapter-berbagi-kebahagian-dengan-masyarakat/index.html">
-                                                                                Read More » </a>
-                                                                        </div>
-                                                                        <div class="elementor-post__meta-data">
-                                                                            <span class="elementor-post-date">
-                                                                                June 8, 2022 </span>
-                                                                        </div>
-                                                                    </div>
-                                                                </article>
+                                                                @endforeach
                                                                 <!-- End Looping -->
                                                             </div>
                                                         </div>

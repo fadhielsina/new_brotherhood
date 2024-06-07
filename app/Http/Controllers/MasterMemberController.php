@@ -90,7 +90,7 @@ class MasterMemberController extends Controller
     public function edit(string $id)
     {
         $form = 'edit';
-        $user = User::find($id);
+        $user = User::where('id', $id)->first();
         $role = Role::all();
         $chapter = MasterChapter::all();
         return view('admin/form_master_member', compact('user', 'form', 'role', 'chapter'));

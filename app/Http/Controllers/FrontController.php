@@ -2,10 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CmsAbout;
-use App\Models\CmsElPresidente;
 use App\Models\CmsHome;
+use App\Models\CmsAbout;
+use App\Models\CmsForFaith;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
+use App\Models\CmsElPresidente;
+use App\Models\MasterBlog;
+use App\Models\Merchant;
+use App\Models\TransactionDetail;
 
 class FrontController extends Controller
 {
@@ -62,6 +67,11 @@ class FrontController extends Controller
         $data['section_body'] = $query->section_body;
 
         $data['section_img'] = $query->section_img;
+        $data['section_img2'] = $query->section_img_dua;
+        $data['section_img3'] = $query->section_img_tiga;
+        $data['section_img4'] = $query->section_img_empat;
+        $data['section_img5'] = $query->section_img_lima;
+        $data['section_img6'] = $query->section_img_enam;
 
         return view('front/el-presidente', compact('data'));
     }
@@ -73,6 +83,7 @@ class FrontController extends Controller
 
     public function for_faith()
     {
+        $query = CmsForFaith::where('status', 1)->first();
         $data['section_title'] = "WHAT IS BFF?";
         $data['section_body'] = "Program Kerja BFF merupakan implementasi Pengabdian nyata kepada Keluarga Besar BB1%MC, Masyarakat dan Bangsa Indonesia Dalam Lingkup Keberagaman Keyakinan Bangsa Indonesia sesuai dengan UUD 1945 &amp; Pancasila, Diselenggarakan oleh Seluruh Members &amp; Keluarga BB1%MCIndonesia. Sinergitas program BB1%MC dan Seluruh Stakeholder / masyarakat (Lembaga Pemerintahan (Kemenag RI-Ormas Keagamaan), Perusahaan Negara atau Swasta, Lembaga Pendidikan juga perorangan.";
         $data['section_img'] = "wp-content/uploads/2022/08/BFF-thumbnail-img.webp";
@@ -291,8 +302,47 @@ class FrontController extends Controller
         return view('front/our-chapter', compact('data'));
     }
 
+    public function merchant()
+    {
+        $products = Merchant::where('status', 0)->get();
+        $product = json_encode($products);
+        return view('front/merchant_new', compact('product'));
+    }
+
+    public function merchant_checkout(Request $request)
+    {
+        $product = $request->all();
+        return view('front/billing_form', compact('product'));
+    }
+
+    public function merchant_submit_form(Request $request)
+    {
+        $transaction = new Transaction;
+        $transaction->name_customer = $request->nama;
+        $transaction->email = $request->email;
+        $transaction->phone = $request->tlp;
+        $transaction->address = $request->alamat;
+        $transaction->total = (int)$request->total * 1000;
+        $transaction->save();
+        $id_transaction = $transaction->id;
+
+        $i = 0;
+        foreach ($request->nama_produk as $val) :
+            $transaction_detail = new TransactionDetail;
+            $transaction_detail->transaction_id = $id_transaction;
+            $transaction_detail->name_product = $request->nama_produk[$i];
+            $transaction_detail->description = $request->deskripsi[$i];
+            $transaction_detail->qty = $request->qty[$i];
+            $transaction_detail->price = (int)$request->price[$i] * 1000;
+            $transaction_detail->save();
+            $i++;
+        endforeach;
+        return view('front/thanks');
+    }
+
     public function blog()
     {
-        return view('front/blog');
+        $data = MasterBlog::where('status', 1)->orderBy('created_at', 'ASC')->get();
+        return view('front/blog', compact('data'));
     }
 }

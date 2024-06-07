@@ -310,31 +310,82 @@ return [
         [
             'text' => 'CMS',
             'icon' => 'fas fa-fw fa-copy',
+            'can' => 'admin',
             'submenu' => [
                 [
                     'text' => 'Home',
                     'url' => 'landing_page/home',
+                    'can' => 'admin',
                 ],
                 [
                     'text' => 'About US',
                     'url' => 'landing_page/about_us',
+                    'can' => 'admin',
                 ],
                 [
                     'text' => 'El Presidente',
                     'url' => 'landing_page/el_presidente',
+                    'can' => 'admin',
                 ],
-                // [
-                //     'text' => '1% Program',
-                //     'url' => 'landing_page/one_program',
-                // ],
-                // [
-                //     'text' => 'Our Chapter',
-                //     'url' => 'landing_page/our_chapter',
-                // ],
-                // [
-                //     'text' => 'Blog',
-                //     'url' => 'landing_page/blog',
-                // ],
+                [
+                    'text' => 'Blog',
+                    'url' => 'landing_page/blog',
+                    'can' => 'admin'
+                ],
+            ]
+        ],
+        [
+            'text' => 'CMS',
+            'icon' => 'fas fa-fw fa-copy',
+            'can' => 'member-merchant',
+            'submenu' => [
+                [
+                    'text' => 'Home',
+                    'url' => 'landing_page/home',
+                    'can' => 'member-merchant'
+                ],
+                [
+                    'text' => 'About US',
+                    'url' => 'landing_page/about_us',
+                    'can' => 'member-merchant'
+                ],
+                [
+                    'text' => 'El Presidente',
+                    'url' => 'landing_page/el_presidente',
+                    'can' => 'member-merchant'
+                ],
+                [
+                    'text' => 'Blog',
+                    'url' => 'landing_page/blog',
+                    'can' => 'member-merchant'
+                ],
+            ]
+        ],
+        [
+            'text' => 'CMS',
+            'icon' => 'fas fa-fw fa-copy',
+            'can' => 'member',
+            'submenu' => [
+                [
+                    'text' => 'Home',
+                    'url' => 'landing_page/home',
+                    'can' => 'member',
+                ],
+                [
+                    'text' => 'About US',
+                    'url' => 'landing_page/about_us',
+                    'can' => 'member',
+                ],
+                [
+                    'text' => 'El Presidente',
+                    'url' => 'landing_page/el_presidente',
+                    'can' => 'member',
+                ],
+                [
+                    'text' => 'Blog',
+                    'url' => 'landing_page/blog',
+                    'can' => 'member'
+                ],
             ]
         ],
         [
@@ -391,15 +442,29 @@ return [
         ],
         [
             'text' => 'List Merchant',
-            'url' => 'admin/merchant',
+            'url' => 'master_merchant',
             'icon' => 'fas fa-fw fa-store',
             'can' => 'admin'
         ],
         [
-            'text' => 'List Request Merchant',
-            'url' => 'admin/merchant',
+            'header' => 'MERCHANT',
+            'can' => 'member-merchant'
+        ],
+        [
+            'text' => 'List Merchant',
+            'url' => 'master_merchant',
             'icon' => 'fas fa-fw fa-store',
-            'can' => 'admin'
+            'can' => 'member-merchant'
+        ],
+        [
+            'header' => 'MERCHANT',
+            'can' => 'merchant'
+        ],
+        [
+            'text' => 'List Merchant',
+            'url' => 'master_merchant',
+            'icon' => 'fas fa-fw fa-store',
+            'can' => 'merchant'
         ],
     ],
 

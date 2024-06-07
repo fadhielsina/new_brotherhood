@@ -44,11 +44,14 @@ class HomeController extends Controller
         $data['news_activity'] = Activity::where('status', 1)->where('start_date', '>=', $current)->orderBy('start_date', 'ASC')->first();
         $data['status_checkin'] = 0;
 
-        $start_activity = date("Y-m-d H:i", strtotime($data['news_activity']->start_date));
-        $end_activity = date("Y-m-d H:i", strtotime($data['news_activity']->end_date));
+        if ($data['news_activity']) :
+            $start_activity = date("Y-m-d H:i", strtotime($data['news_activity']->start_date));
+            $end_activity = date("Y-m-d H:i", strtotime($data['news_activity']->end_date));
 
-        if (($current >= $start_activity) && ($current <= $end_activity)) :
-            $data['status_checkin'] = 1;
+            if (($current >= $start_activity) && ($current <= $end_activity)) :
+                $data['status_checkin'] = 1;
+            endif;
+
         endif;
         return view('home', compact('data'));
     }

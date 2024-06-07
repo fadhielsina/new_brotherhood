@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\CmsAbout;
 use App\Models\CmsElPresidente;
 use App\Models\CmsHome;
+use App\Models\MasterBlog;
+use App\Models\MasterProgram;
 use Dotenv\Util\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -19,7 +21,7 @@ class CmsController extends Controller
         if ($role[0] == 1) :
             $data = CmsHome::get();
         else :
-            $data = CmsHome::where('user_id', $id_user);
+            $data = CmsHome::where('user_id', $id_user)->get();
         endif;
         return view('cms/home', compact('data'));
     }
@@ -91,7 +93,7 @@ class CmsController extends Controller
     public function home_edit(string $id)
     {
         $form = 'edit';
-        $data = CmsHome::find($id)->first();
+        $data = CmsHome::where('id', $id)->first();
         return view('cms/form_home', compact('form', 'data'));
     }
 
@@ -170,10 +172,11 @@ class CmsController extends Controller
 
     public function home_destroy(string $id)
     {
-        $cek_status = CmsHome::find($id)->first();
+        $cek_status = CmsHome::where('id', $id)->first();
         if ($cek_status->status == 1) :
             return redirect()->route('landing_page.home')->with('error', 'Data yang sedang aktif tidak bisa dihapus');
         else :
+            CmsHome::where('id', $id)->delete();
             return redirect()->route('landing_page.home')->with('success', 'Data berhasil dihapus');
         endif;
     }
@@ -246,7 +249,7 @@ class CmsController extends Controller
     public function about_edit(string $id)
     {
         $form = 'edit';
-        $data = CmsAbout::find($id)->first();
+        $data = CmsAbout::where('id', $id)->first();
         return view('cms/form_about', compact('form', 'data'));
     }
 
@@ -300,10 +303,11 @@ class CmsController extends Controller
 
     public function about_destroy(string $id)
     {
-        $cek_status = CmsAbout::find($id)->first();
+        $cek_status = CmsAbout::where('id', $id)->first();
         if ($cek_status->status == 1) :
             return redirect()->route('landing_page.about_us')->with('error', 'Data yang sedang aktif tidak bisa dihapus');
         else :
+            CmsAbout::where('id', $id)->delete();
             return redirect()->route('landing_page.about_us')->with('success', 'Data berhasil dihapus');
         endif;
     }
@@ -339,6 +343,11 @@ class CmsController extends Controller
         $request->validate([
             'section_body' => 'required',
             'section_img' => 'required',
+            'section_img_dua' => 'required',
+            'section_img_tiga' => 'required',
+            'section_img_empat' => 'required',
+            'section_img_lima' => 'required',
+            'section_img_enam' => 'required',
         ]);
 
         $file = $request->file('section_img');
@@ -346,10 +355,40 @@ class CmsController extends Controller
         $path = 'front/el_presidente/' . $filename;
         Storage::disk('public')->put($path, file_get_contents($file));
 
+        $file = $request->file('section_img_dua');
+        $filename2 = 'section_img_dua_' . date('YMdHis') . '.' . $file->getClientOriginalExtension();
+        $path = 'front/el_presidente/' . $filename2;
+        Storage::disk('public')->put($path, file_get_contents($file));
+
+        $file = $request->file('section_img_tiga');
+        $filename3 = 'section_img_tiga_' . date('YMdHis') . '.' . $file->getClientOriginalExtension();
+        $path = 'front/el_presidente/' . $filename3;
+        Storage::disk('public')->put($path, file_get_contents($file));
+
+        $file = $request->file('section_img_empat');
+        $filename4 = 'section_img_empat_' . date('YMdHis') . '.' . $file->getClientOriginalExtension();
+        $path = 'front/el_presidente/' . $filename4;
+        Storage::disk('public')->put($path, file_get_contents($file));
+
+        $file = $request->file('section_img_lima');
+        $filename5 = 'section_img_lima_' . date('YMdHis') . '.' . $file->getClientOriginalExtension();
+        $path = 'front/el_presidente/' . $filename5;
+        Storage::disk('public')->put($path, file_get_contents($file));
+
+        $file = $request->file('section_img_enam');
+        $filename6 = 'section_img_enam_' . date('YMdHis') . '.' . $file->getClientOriginalExtension();
+        $path = 'front/el_presidente/' . $filename6;
+        Storage::disk('public')->put($path, file_get_contents($file));
+
         $data = [
             'user_id' => Auth::user()->id,
             'section_body' => $request->section_body,
             'section_img' => $filename,
+            'section_img_dua' => $filename2,
+            'section_img_tiga' => $filename3,
+            'section_img_empat' => $filename4,
+            'section_img_lima' => $filename5,
+            'section_img_enam' => $filename6,
         ];
 
         CmsElPresidente::create($data);
@@ -359,7 +398,7 @@ class CmsController extends Controller
     public function presidente_edit(string $id)
     {
         $form = 'edit';
-        $data = CmsElPresidente::find($id)->first();
+        $data = CmsElPresidente::where('id', $id)->first();
         return view('cms/form_presidente', compact('form', 'data'));
     }
 
@@ -382,16 +421,57 @@ class CmsController extends Controller
             $data['section_img'] = $filename;
         endif;
 
+        if ($request->file('section_img_dua')) :
+            $file = $request->file('section_img_dua');
+            $filename2 = 'section_img_dua_' . date('YMdHis') . '.' . $file->getClientOriginalExtension();
+            $path = 'front/el_presidente/' . $filename2;
+            Storage::disk('public')->put($path, file_get_contents($file));
+            $data['section_img_dua'] = $filename2;
+        endif;
+
+        if ($request->file('section_img_tiga')) :
+            $file = $request->file('section_img_tiga');
+            $filename3 = 'section_img_tiga_' . date('YMdHis') . '.' . $file->getClientOriginalExtension();
+            $path = 'front/el_presidente/' . $filename3;
+            Storage::disk('public')->put($path, file_get_contents($file));
+            $data['section_img_tiga'] = $filename3;
+        endif;
+
+        if ($request->file('section_img_empat')) :
+            $file = $request->file('section_img_empat');
+            $filename4 = 'section_img_empat' . date('YMdHis') . '.' . $file->getClientOriginalExtension();
+            $path = 'front/el_presidente/' . $filename4;
+            Storage::disk('public')->put($path, file_get_contents($file));
+            $data['section_img_empat'] = $filename4;
+        endif;
+
+        if ($request->file('section_img_lima')) :
+            $file = $request->file('section_img_lima');
+            $filename5 = 'section_img_lima' . date('YMdHis') . '.' . $file->getClientOriginalExtension();
+            $path = 'front/el_presidente/' . $filename5;
+            Storage::disk('public')->put($path, file_get_contents($file));
+            $data['section_img_lima'] = $filename5;
+        endif;
+
+        if ($request->file('section_img_enam')) :
+            $file = $request->file('section_img_enam');
+            $filename6 = 'section_img_enam' . date('YMdHis') . '.' . $file->getClientOriginalExtension();
+            $path = 'front/el_presidente/' . $filename6;
+            Storage::disk('public')->put($path, file_get_contents($file));
+            $data['section_img_enam'] = $filename6;
+        endif;
+
         CmsElPresidente::where('id', $id)->update($data);
         return redirect()->route('landing_page.presidente')->with('success', 'Data berhasil ditambah');
     }
 
     public function presidente_destroy(string $id)
     {
-        $cek_status = CmsElPresidente::find($id)->first();
+        $cek_status = CmsElPresidente::where('id', $id)->first();
         if ($cek_status->status == 1) :
             return redirect()->route('landing_page.presidente')->with('error', 'Data yang sedang aktif tidak bisa dihapus');
         else :
+            CmsElPresidente::where('id', $id)->delete();
             return redirect()->route('landing_page.presidente')->with('success', 'Data berhasil dihapus');
         endif;
     }
@@ -455,6 +535,98 @@ class CmsController extends Controller
     // ===================================================== Blog =====================================================
     public function blog()
     {
-        return view('front/blog');
+        $id_user = Auth::user()->id;
+        $role = Auth::user()->roles->pluck('id');
+        if ($role[0] == 1) :
+            $data = MasterBlog::get();
+        else :
+            $data = MasterBlog::where('user_id', $id_user);
+        endif;
+        return view('cms/blog', compact('data'));
+    }
+
+    public function blog_form()
+    {
+        $form = 'add';
+        $program = MasterProgram::get();
+        return view('cms/form_blog', compact('form', 'program'));
+    }
+
+    public function blog_submit(Request $request)
+    {
+        $request->validate([
+            'event_name' => 'required',
+            'title' => 'required',
+            'description' => 'required',
+            'picture' => 'required',
+        ]);
+
+        $file = $request->file('picture');
+        $filename = 'picture_' . date('YMdHis') . '.' . $file->getClientOriginalExtension();
+        $path = 'front/blog/' . $filename;
+        Storage::disk('public')->put($path, file_get_contents($file));
+
+        $data = [
+            'user_id' => Auth::user()->id,
+            'event_name' => $request->event_name,
+            'title' => $request->title,
+            'description' => $request->description,
+            'picture' => $filename,
+        ];
+
+        MasterBlog::create($data);
+        return redirect()->route('landing_page.blog')->with('success', 'Data berhasil ditambah');
+    }
+
+    public function blog_edit(string $id)
+    {
+        $form = 'edit';
+        $data = MasterBlog::where('id', $id)->first();
+        $program = MasterProgram::get();
+        return view('cms/form_blog', compact('form', 'data', 'program'));
+    }
+
+    public function blog_update(Request $request, string $id)
+    {
+        $request->validate([
+            'event_name' => 'required',
+            'title' => 'required',
+            'description' => 'required',
+        ]);
+
+        $data = [
+            'user_id' => Auth::user()->id,
+            'event_name' => $request->event_name,
+            'title' => $request->title,
+            'description' => $request->description,
+        ];
+
+        if ($request->file('picture')) :
+            $file = $request->file('section_img');
+            $filename = 'picture_' . date('YMdHis') . '.' . $file->getClientOriginalExtension();
+            $path = 'front/blog/' . $filename;
+            Storage::disk('public')->put($path, file_get_contents($file));
+            $data['picture'] = $filename;
+        endif;
+
+        MasterBlog::where('id', $id)->update($data);
+        return redirect()->route('landing_page.blog')->with('success', 'Data berhasil ditambah');
+    }
+
+    public function blog_destroy(string $id)
+    {
+        $cek_status = MasterBlog::where('id', $id)->first();
+        if ($cek_status->status == 1) :
+            return redirect()->route('landing_page.blog')->with('error', 'Data yang sedang aktif tidak bisa dihapus');
+        else :
+            MasterBlog::where('id', $id)->delete();
+            return redirect()->route('landing_page.blog')->with('success', 'Data berhasil dihapus');
+        endif;
+    }
+
+    public function blog_posting(string $id)
+    {
+        MasterBlog::where('id', $id)->update(["status" => 1]);
+        return redirect()->route('landing_page.blog')->with('success', 'Data berhasil di publish');
     }
 }
