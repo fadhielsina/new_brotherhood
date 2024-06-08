@@ -299,6 +299,13 @@ return [
             'type' => 'fullscreen-widget',
             'topnav_right' => true,
         ],
+        [
+            'text' => 'profile',
+            'classes' => 'text-center',
+            'url' => 'home_profile',
+            'icon' => 'fas fa-fw fa-user',
+            'topnav_user' => true
+        ],
 
         // Sidebar items:
         [
@@ -316,21 +323,25 @@ return [
                     'text' => 'Home',
                     'url' => 'landing_page/home',
                     'can' => 'admin',
+                    'classes' => 'ml-3'
                 ],
                 [
                     'text' => 'About US',
                     'url' => 'landing_page/about_us',
                     'can' => 'admin',
+                    'classes' => 'ml-3'
                 ],
                 [
                     'text' => 'El Presidente',
                     'url' => 'landing_page/el_presidente',
                     'can' => 'admin',
+                    'classes' => 'ml-3'
                 ],
                 [
                     'text' => 'Blog',
                     'url' => 'landing_page/blog',
-                    'can' => 'admin'
+                    'can' => 'admin',
+                    'classes' => 'ml-3'
                 ],
             ]
         ],
@@ -342,22 +353,26 @@ return [
                 [
                     'text' => 'Home',
                     'url' => 'landing_page/home',
-                    'can' => 'member-merchant'
+                    'can' => 'member-merchant',
+                    'classes' => 'ml-3'
                 ],
                 [
                     'text' => 'About US',
                     'url' => 'landing_page/about_us',
-                    'can' => 'member-merchant'
+                    'can' => 'member-merchant',
+                    'classes' => 'ml-3'
                 ],
                 [
                     'text' => 'El Presidente',
                     'url' => 'landing_page/el_presidente',
-                    'can' => 'member-merchant'
+                    'can' => 'member-merchant',
+                    'classes' => 'ml-3'
                 ],
                 [
                     'text' => 'Blog',
                     'url' => 'landing_page/blog',
-                    'can' => 'member-merchant'
+                    'can' => 'member-merchant',
+                    'classes' => 'ml-3'
                 ],
             ]
         ],
@@ -370,21 +385,25 @@ return [
                     'text' => 'Home',
                     'url' => 'landing_page/home',
                     'can' => 'member',
+                    'classes' => 'ml-3'
                 ],
                 [
                     'text' => 'About US',
                     'url' => 'landing_page/about_us',
                     'can' => 'member',
+                    'classes' => 'ml-3'
                 ],
                 [
                     'text' => 'El Presidente',
                     'url' => 'landing_page/el_presidente',
                     'can' => 'member',
+                    'classes' => 'ml-3'
                 ],
                 [
                     'text' => 'Blog',
                     'url' => 'landing_page/blog',
-                    'can' => 'member'
+                    'can' => 'member',
+                    'classes' => 'ml-3'
                 ],
             ]
         ],
@@ -399,12 +418,14 @@ return [
                 [
                     'text' => 'List All Member',
                     'url' => 'master_member',
-                    'can' => 'admin'
+                    'can' => 'admin',
+                    'classes' => 'ml-3'
                 ],
                 [
                     'text' => 'List Member Request',
                     'url' => 'member_request',
-                    'can' => 'admin'
+                    'can' => 'admin',
+                    'classes' => 'ml-3'
                 ],
             ]
         ],

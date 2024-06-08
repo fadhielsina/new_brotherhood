@@ -85,8 +85,11 @@
                                 </ul>
                             </div>
                             <div class="col-5 text-center">
+                                @if(Auth::user()->avatar)
+                                <img src="{{ url('storage/avatar/'.Auth::user()->avatar.'') }}" style="height: 100px; width: 100px;" alt="user-avatar" class="img-circle img-fluid">
+                                @else
                                 <img src="{{asset('assets')}}/kartu_anggota/profile_1.jpg" alt="user-avatar" class="img-circle img-fluid">
-                                <!-- <img src="{{ url('storage/avatar/'.Auth::user()->avatar.'') }}" style="height: 100px; width: 100px;" alt="user-avatar" class="img-circle img-fluid"> -->
+                                @endif
                             </div>
                         </div>
                     </div>

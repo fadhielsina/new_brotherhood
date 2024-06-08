@@ -90,4 +90,24 @@ class HomeController extends Controller
         Attendance::create($data);
         return redirect()->route('home')->with('success', 'Checkin Berhasil');
     }
+
+    public function profile()
+    {
+        $user = Auth::user();
+        return view('profile', compact('user'));
+    }
+
+    public function profile_update(Request $request, string $id)
+    {
+        $request->validate([
+            'repassword' => 'required|same:password'
+        ]);
+
+        $data = [
+            'password' => bcrypt($request->password)
+        ];
+
+        User::where('id', $id)->update($data);
+        return redirect()->route('home')->with('success', 'Data Berhasil Dirubah');
+    }
 }
