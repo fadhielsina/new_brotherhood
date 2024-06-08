@@ -12,6 +12,8 @@
 <div class="card card-primary card-outline">
     <div class="card-body box-profile text-center">
         <form method="POST" action="{{ route('home.checkin_submit') }}">
+            <input type="hidden" name="user_id" id="user_id" value="{{Auth::user()->id}}">
+            <input type="hidden" name="activity_id" id="activity_id" value="{{$data->id}}">
             @csrf
             <div class="text-center">
                 <div class="row">

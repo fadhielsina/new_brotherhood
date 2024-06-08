@@ -47,7 +47,7 @@ Route::resource('reguser', RegisterUserController::class);
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/home_checkin', [HomeController::class, 'checkin'])->name('home.checkin');
+Route::get('/home_checkin/{id}', [HomeController::class, 'checkin'])->name('home.checkin');
 Route::post('/home_checkin_submit', [HomeController::class, 'checkin_submit'])->name('home.checkin_submit');
 
 Route::resource('master_merchant', MasterMerchantController::class);

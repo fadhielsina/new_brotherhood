@@ -1,3 +1,4 @@
+@section('plugins.BsCustomFileInput', true)
 @extends('adminlte::page')
 
 @section('title', 'Form Blog Page')
@@ -42,12 +43,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Picture</label>
-                        <div class="input-group">
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="picture" name="picture">
-                                <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                            </div>
-                        </div>
+                        <x-adminlte-input-file name="picture" />
                         @if($form == 'edit')
                         <img src="{{ asset('storage/front/blog/'.$data->picture.'') }}" width="200" height="200" alt="">
                         @endif

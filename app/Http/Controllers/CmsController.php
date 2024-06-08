@@ -196,7 +196,7 @@ class CmsController extends Controller
 
     public function about_form()
     {
-        $form = 'edit';
+        $form = 'add';
         return view('cms/form_about', compact('form'));
     }
 

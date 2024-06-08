@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Activity;
+use App\Models\Attendance;
 use App\Models\MasterChapter;
 use App\Models\MasterProgram;
 use App\Models\User;
@@ -29,8 +30,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $id_user = Auth::user()->id;
         $status = Auth::user()->status;
-        $current = date('Y-m-d H:i:00');
+        $current = date('Y-m-d H:i:s');
 
         if ($status != 1) :
             Auth::logout();
@@ -41,29 +43,37 @@ class HomeController extends Controller
         $data['jumlah_chapter'] = MasterChapter::count();
         $data['jumlah_program'] = MasterProgram::count();
         $data['jumlah_activity'] = Activity::where('status', 1)->orderBy('start_date', 'ASC')->limit(5)->get();
-        $data['news_activity'] = Activity::where('status', 1)->where('start_date', '>=', $current)->orderBy('start_date', 'ASC')->first();
+        $data['news_activity'] = Activity::where('status', 1)->where('end_date', '>=', $current)->orderBy('start_date', 'ASC')->limit(1)->get();
         $data['status_checkin'] = 0;
+        // $data['attendance'] = Attendance::where('user_id', $id_user)->orderBy('checkin', 'DESC')->limit(1)->get();
 
-        if ($data['news_activity']) :
-            $start_activity = date("Y-m-d H:i", strtotime($data['news_activity']->start_date));
-            $end_activity = date("Y-m-d H:i", strtotime($data['news_activity']->end_date));
-
-            if (($current >= $start_activity) && ($current <= $end_activity)) :
-                $data['status_checkin'] = 1;
+        if ($data['news_activity']->isEmpty() === false) :
+            $act_id = $data['news_activity'][0]->id;
+            $attendance = Attendance::where('user_id', $id_user)->where('activity_id', $act_id)->get();
+            if ($attendance->isEmpty() === true) :
+                $start_activity = date("Y-m-d H:i:s", strtotime($data['news_activity'][0]->start_date));
+                $end_activity = date("Y-m-d H:i:s", strtotime($data['news_activity'][0]->end_date));
+                if (($start_activity <= $current) && ($end_activity >= $current)) :
+                    $data['status_checkin'] = 1;
+                endif;
             endif;
 
         endif;
+
+
+
+
         return view('home', compact('data'));
     }
 
-    public function checkin()
+    public function checkin($id)
     {
-        return view('form_checkin');
+        $data = Activity::where('id', $id)->first();
+        return view('form_checkin', compact('data'));
     }
 
     public function checkin_submit(Request $request)
     {
-
         $base64str = $request->image;
         $image = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $base64str));
         $filename = uniqid() . '.jpeg';
@@ -71,6 +81,13 @@ class HomeController extends Controller
         $path = 'attendance/' . $filename;
         Storage::disk('public')->put($path, $image);
 
-        dd('masuk');
+        $data = [
+            'checkin' => date('Y-m-d H:i:s'),
+            'picture' => $filename,
+            'user_id' => $request->user_id,
+            'activity_id' => $request->activity_id
+        ];
+        Attendance::create($data);
+        return redirect()->route('home')->with('success', 'Checkin Berhasil');
     }
 }

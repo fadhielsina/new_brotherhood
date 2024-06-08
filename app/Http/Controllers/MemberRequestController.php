@@ -45,7 +45,7 @@ class MemberRequestController extends Controller
      */
     public function edit(string $id)
     {
-        $user = User::where('id', $id);
+        $user = User::where('id', $id)->first();
         return view('admin/form_member_request', compact('user'));
     }
 

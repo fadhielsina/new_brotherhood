@@ -1,3 +1,4 @@
+@section('plugins.BsCustomFileInput', true)
 @extends('adminlte::page')
 
 @section('title', 'Form Member')
@@ -76,12 +77,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Foto Profile</label>
-                        <div class="input-group">
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="avatar" name="avatar">
-                                <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                            </div>
-                        </div>
+                        <x-adminlte-input-file name="avatar" />
                     </div>
                     @else
                     <div class="form-group">

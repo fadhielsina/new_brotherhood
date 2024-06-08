@@ -430,12 +430,12 @@ return [
             'icon' => 'fas fa-fw fa-table',
             'can' => 'admin'
         ],
-        [
-            'text' => 'Request News Activity',
-            'url' => 'news_activity_request',
-            'icon' => 'fas fa-fw fa-table',
-            'can' => 'admin'
-        ],
+        // [
+        //     'text' => 'Request News Activity',
+        //     'url' => 'news_activity_request',
+        //     'icon' => 'fas fa-fw fa-table',
+        //     'can' => 'admin'
+        // ],
         [
             'header' => 'MERCHANT',
             'can' => 'admin'
@@ -503,6 +503,16 @@ return [
     */
 
     'plugins' => [
+        'BsCustomFileInput' => [
+            'active' => false,
+            'files' => [
+                [
+                    'type' => 'js',
+                    'asset' => true,
+                    'location' => 'vendor/bs-custom-file-input/bs-custom-file-input.min.js',
+                ],
+            ],
+        ],
         'Datatables' => [
             'active' => false,
             'files' => [

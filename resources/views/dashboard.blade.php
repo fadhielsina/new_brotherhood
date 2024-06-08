@@ -79,17 +79,19 @@
                         <h3 class="card-title">News Activity</h3>
                     </div>
                     <div class="card-body">
-                        <strong><i class="far fa-file-alt mr-1"></i> {{$data['news_activity']->program->name_program}}</strong>
-                        <small class="badge badge-danger"><i class="far fa-clock"></i> {{date("d-M-Y H:i:s", strtotime($data['news_activity']->start_date))}} </small>
-                        <p class="text-muted"><?= nl2br($data['news_activity']->description) ?></p>
+                        @foreach($data['news_activity'] as $val)
+                        <strong><i class="far fa-file-alt mr-1"></i> {{$val->program->name_program}}</strong>
+                        <small class="badge badge-danger"><i class="far fa-clock"></i> {{date("d-M-Y H:i:s", strtotime($val->start_date))}} </small>
+                        <p class="text-muted"><?= nl2br($val->description) ?></p>
                         <hr>
                         <div class="text-center">
                             @if($data['status_checkin'] == 1)
-                            <a href="{{route('home.checkin')}}" class="btn btn-primary">Attend</a>
+                            <a href="{{route('home.checkin', $val->id)}}" class="btn btn-primary">Attend</a>
                             @else
-                            <a href="{{route('home.checkin')}}" class="btn btn-danger disabled">Attend</a>
+                            <a class="btn btn-danger disabled">Attend</a>
                             @endif
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

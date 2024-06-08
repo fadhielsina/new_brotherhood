@@ -57,7 +57,10 @@ class NewsActivityController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $data = Activity::where('id', $id)->first();
+        $activity = Activity::where('status', 1)->get();
+        $program = MasterProgram::get();
+        return view('admin/form_news_activity', compact('data', 'activity', 'program'));
     }
 
     /**
@@ -65,7 +68,16 @@ class NewsActivityController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'program_id' => 'required',
+            'name_activity' => 'required',
+            'start_date' => 'required',
+            'end_date' => 'required',
+            'description' => 'required',
+        ]);
+        $input = $request->except(['_token', '_method']);
+        Activity::where('id', $id)->update($input);
+        return redirect()->route('news_activity.index')->with('success', 'Data berhasil dirubah');
     }
 
     /**

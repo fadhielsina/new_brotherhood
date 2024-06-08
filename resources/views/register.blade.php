@@ -1,3 +1,4 @@
+@section('plugins.BsCustomFileInput', true)
 @extends('adminlte::auth.auth-page', ['auth_type' => 'register'])
 @section('auth_header', __('adminlte::adminlte.register_message'))
 @section('auth_body')
@@ -58,10 +59,7 @@
         <div class="form-group">
             <label for="">Foto Profile</label>
             <div class="input-group">
-                <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="avatar" name="avatar">
-                    <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                </div>
+                <x-adminlte-input-file name="avatar" />
             </div>
         </div>
         <div class="form-group">

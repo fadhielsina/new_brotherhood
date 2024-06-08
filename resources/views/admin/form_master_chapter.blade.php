@@ -1,3 +1,4 @@
+@section('plugins.BsCustomFileInput', true)
 @extends('adminlte::page')
 
 @section('title', 'Master Chapter Edit')
@@ -25,12 +26,7 @@
                 </div>
                 <div class="form-group">
                     <label for="">Logo File</label>
-                    <div class="input-group">
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="logo_chapter" name="logo_chapter">
-                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                        </div>
-                    </div>
+                    <x-adminlte-input-file name="logo_chapter" />
                 </div>
             </div>
 

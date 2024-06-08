@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\MasterChapter;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\Storage;
@@ -123,11 +124,15 @@ class MasterMemberController extends Controller
      */
     public function destroy(string $id)
     {
-        User::where('id', $id)->delete();
-        Session::flash('success', 'Data Berhasil Dihapus!');
-        return response()->json([
-            'success' => true,
-            'data'    => $id
-        ]);
+        if ($id == Auth::user()->id) :
+            Session::flash('error', 'Data Tidak Bisa Dihapus!');
+        else :
+            User::where('id', $id)->delete();
+            Session::flash('success', 'Data Berhasil Dihapus!');
+            return response()->json([
+                'success' => true,
+                'data'    => $id
+            ]);
+        endif;
     }
 }
