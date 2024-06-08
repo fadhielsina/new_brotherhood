@@ -110,4 +110,10 @@ class HomeController extends Controller
         User::where('id', $id)->update($data);
         return redirect()->route('home')->with('success', 'Data Berhasil Dirubah');
     }
+
+    public function brothers()
+    {
+        $brothers = User::orderBy('chapter_id', 'ASC')->get();
+        return view('brothers', compact('brothers'));
+    }
 }

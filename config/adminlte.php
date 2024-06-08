@@ -315,6 +315,12 @@ return [
             'label_color' => 'success',
         ],
         [
+            'text' => 'My Brother',
+            'url' => 'home/brothers',
+            'icon' => 'fas fa-fw fa-users',
+            'label_color' => 'success',
+        ],
+        [
             'text' => 'CMS',
             'icon' => 'fas fa-fw fa-copy',
             'can' => 'admin',

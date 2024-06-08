@@ -53,6 +53,8 @@ Route::post('/home_checkin_submit', [HomeController::class, 'checkin_submit'])->
 Route::get('/home_profile', [HomeController::class, 'profile'])->name('home.profile');
 Route::put('/home_profile_update/{id}', [HomeController::class, 'profile_update'])->name('home.profile.update');
 
+Route::get('/home/brothers', [HomeController::class, 'brothers'])->name('home.brothers');
+
 Route::resource('master_merchant', MasterMerchantController::class);
 
 // CMS

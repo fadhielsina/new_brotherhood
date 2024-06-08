@@ -26,7 +26,6 @@
     </div>
 
     <div class="col-lg-3 col-7">
-
         <div class="small-box bg-danger">
             <div class="inner">
                 <h3>My Brother</h3>
@@ -34,9 +33,23 @@
             <div class="icon">
                 <i class="ion ion-pie-graph"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{url('home/brothers')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
         </div>
     </div>
+
+    @role("member-merchant")
+    <div class="col-lg-3 col-7">
+        <div class="small-box bg-warning">
+            <div class="inner">
+                <h3>Merchant</h3>
+            </div>
+            <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+            </div>
+            <a href="{{url('master_merchant')}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    @endrole
 
 </div>
 
@@ -56,6 +69,7 @@
                                 <ul class="ml-4 mb-0 fa-ul text-muted">
                                     <li class=""><span class="fa-li"><i class="fas fa-solid fa-building"></i></span> Address: {{Auth::user()->address}}</li>
                                     <li class=""><span class="fa-li"><i class="fas fa-solid fa-phone"></i></span> Phone: {{Auth::user()->phone}}</li>
+                                    <li class=""><span class="fa-li"><i class="fas fa-lg fa-calendar"></i></span> Join Date #: {{date('d-m-Y', strtotime(Auth::user()->created_at))}}</li>
                                 </ul>
                             </div>
                             <div class="col-5 text-center">
