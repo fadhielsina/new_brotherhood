@@ -3591,7 +3591,7 @@ flexibility(document.documentElement);
                                 <div class="elementor-element elementor-element-aaf1098 elementor-mobile-align-center elementor-tablet-align-center elementor-widget elementor-widget-button" data-id="aaf1098" data-element_type="widget" data-widget_type="button.default">
                                     <div class="elementor-widget-container">
                                         <div class="elementor-button-wrapper">
-                                            <a class="elementor-button elementor-button-link elementor-size-xs" href="{{asset('front')}}/home/index.html">
+                                            <a class="elementor-button elementor-button-link elementor-size-xs" href="{{url('/')}}">
                                                 <span class="elementor-button-content-wrapper">
                                                     <span class="elementor-button-text"><strong>&#8226</strong> Home</span>
                                                 </span>
@@ -3602,7 +3602,7 @@ flexibility(document.documentElement);
                                 <div class="elementor-element elementor-element-17d7083 elementor-mobile-align-center elementor-tablet-align-center elementor-widget elementor-widget-button" data-id="17d7083" data-element_type="widget" data-widget_type="button.default">
                                     <div class="elementor-widget-container">
                                         <div class="elementor-button-wrapper">
-                                            <a class="elementor-button elementor-button-link elementor-size-xs" href="{{asset('front')}}/about-us/index.html">
+                                            <a class="elementor-button elementor-button-link elementor-size-xs" href="{{url('/about-us')}}">
                                                 <span class="elementor-button-content-wrapper">
                                                     <span class="elementor-button-text"><strong>&#8226</strong> About</span>
                                                 </span>
@@ -3613,20 +3613,9 @@ flexibility(document.documentElement);
                                 <div class="elementor-element elementor-element-4e71531 elementor-mobile-align-center elementor-tablet-align-center elementor-widget elementor-widget-button" data-id="4e71531" data-element_type="widget" data-widget_type="button.default">
                                     <div class="elementor-widget-container">
                                         <div class="elementor-button-wrapper">
-                                            <a class="elementor-button elementor-button-link elementor-size-xs" href="{{asset('front')}}/home/index.html">
+                                            <a class="elementor-button elementor-button-link elementor-size-xs" href="{{url('/our-chapter')}}">
                                                 <span class="elementor-button-content-wrapper">
                                                     <span class="elementor-button-text"><strong>&#8226</strong> Our Chapter</span>
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="elementor-element elementor-element-17bf98c elementor-mobile-align-center elementor-tablet-align-center elementor-widget elementor-widget-button" data-id="17bf98c" data-element_type="widget" data-widget_type="button.default">
-                                    <div class="elementor-widget-container">
-                                        <div class="elementor-button-wrapper">
-                                            <a class="elementor-button elementor-button-link elementor-size-xs" href="{{asset('front')}}/our-blood/index.html">
-                                                <span class="elementor-button-content-wrapper">
-                                                    <span class="elementor-button-text"><strong>&#8226</strong> Our Blood</span>
                                                 </span>
                                             </a>
                                         </div>
@@ -3635,7 +3624,7 @@ flexibility(document.documentElement);
                                 <div class="elementor-element elementor-element-c5f2852 elementor-mobile-align-center elementor-tablet-align-center elementor-widget elementor-widget-button" data-id="c5f2852" data-element_type="widget" data-widget_type="button.default">
                                     <div class="elementor-widget-container">
                                         <div class="elementor-button-wrapper">
-                                            <a class="elementor-button elementor-button-link elementor-size-xs" href="{{asset('front')}}/1-program/index.html">
+                                            <a class="elementor-button elementor-button-link elementor-size-xs" href="{{url('/1-program')}}">
                                                 <span class="elementor-button-content-wrapper">
                                                     <span class="elementor-button-text"><strong>&#8226</strong> 1% Program</span>
                                                 </span>
