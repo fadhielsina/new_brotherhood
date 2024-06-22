@@ -2943,8 +2943,41 @@
                         </div>
                         <div class="elementor-background-overlay"></div>
                         <div class="elementor-container elementor-column-gap-default">
+                            <style>
+                                /* The dots/bullets/indicators */
+                                .dot {
+                                    height: 15px;
+                                    width: 15px;
+                                    margin: 0 2px;
+                                    background-color: #bbb;
+                                    border-radius: 50%;
+                                    display: inline-block;
+                                    transition: background-color 0.6s ease;
+                                }
+
+                                .active {
+                                    background-color: #717171;
+                                }
+
+                                /* Fading animation */
+                                .fade {
+                                    animation-name: fade;
+                                    animation-duration: 1.5s;
+                                }
+
+                                @keyframes fade {
+                                    from {
+                                        opacity: .4
+                                    }
+
+                                    to {
+                                        opacity: 1
+                                    }
+                                }
+                            </style>
+                            <!-- Slider -->
                             <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-ce69f06" data-id="ce69f06" data-element_type="column" data-settings="{&quot;animation_mobile&quot;:&quot;fadeIn&quot;}">
-                                <div class="elementor-widget-wrap elementor-element-populated">
+                                <div class="mySlides fade elementor-widget-wrap elementor-element-populated">
                                     <div class="elementor-element elementor-element-23d1317 animated-slow elementor-invisible elementor-widget elementor-widget-heading" data-id="23d1317" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="heading.default">
                                         <div class="elementor-widget-container">
                                             <style>
@@ -3070,8 +3103,57 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div style="text-align:center">
+                                        <span class="dot"></span>
+                                    </div>
                                 </div>
+
+                                @if($data['sliders']->count() > 0)
+                                @foreach($data['sliders'] as $sld)
+                                <div class="mySlides fade elementor-widget-wrap elementor-element-populated">
+                                    <div class="elementor-element elementor-element-23d1317 animated-slow elementor-invisible elementor-widget elementor-widget-heading" data-id="23d1317" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="heading.default">
+                                        <div class="elementor-widget-container">
+                                        </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-76f50b1 elementor-position-left elementor-vertical-align-middle animated-slow elementor-invisible elementor-widget elementor-widget-image-box" data-id="76f50b1" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:600}" data-widget_type="image-box.default">
+                                        <div class="elementor-widget-container">
+                                            <div class="elementor-image-box-wrapper">
+                                                <img decoding="async" style="width: 100%; height:480px;" src="{{asset('storage/front/sliders')}}/{{$sld->name_file}}" class="attachment-full size-full wp-image-1102" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="text-align:center">
+                                        <span class="dot"></span>
+                                    </div>
+                                </div>
+                                @endforeach
+                                @endif
+
                             </div>
+                            <!-- End Slider -->
+                            <script>
+                                let slideIndex = 0;
+                                showSlides();
+
+                                function showSlides() {
+                                    let i;
+                                    let slides = document.getElementsByClassName("mySlides");
+                                    let dots = document.getElementsByClassName("dot");
+                                    for (i = 0; i < slides.length; i++) {
+                                        slides[i].style.display = "none";
+                                    }
+                                    slideIndex++;
+                                    if (slideIndex > slides.length) {
+                                        slideIndex = 1
+                                    }
+                                    for (i = 0; i < dots.length; i++) {
+                                        dots[i].className = dots[i].className.replace(" active", "");
+                                    }
+                                    slides[slideIndex - 1].style.display = "block";
+                                    dots[slideIndex - 1].className += " active";
+                                    setTimeout(showSlides, 4000); // Change image every 2 seconds
+                                }
+                            </script>
                         </div>
                     </section>
                     <section class="elementor-section elementor-top-section elementor-element elementor-element-62c83f37 elementor-section-full_width elementor-section-content-middle elementor-section-height-min-height elementor-section-height-default elementor-section-items-middle" data-id="62c83f37" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">

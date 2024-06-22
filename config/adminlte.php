@@ -326,6 +326,12 @@ return [
             'can' => 'admin',
             'submenu' => [
                 [
+                    'text' => 'Sliders',
+                    'url' => 'landing_page/sliders',
+                    'can' => 'admin',
+                    'classes' => 'ml-3'
+                ],
+                [
                     'text' => 'Home',
                     'url' => 'landing_page/home',
                     'can' => 'admin',

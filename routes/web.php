@@ -58,6 +58,12 @@ Route::get('/home/brothers', [HomeController::class, 'brothers'])->name('home.br
 Route::resource('master_merchant', MasterMerchantController::class);
 
 // CMS
+Route::get('/landing_page/sliders', [CmsController::class, 'sliders'])->name('landing_page.sliders');
+Route::get('/landing_page/sliders_form', [CmsController::class, 'sliders_form'])->name('landing_page.sliders.create');
+Route::post('/landing_page/sliders_submit', [CmsController::class, 'sliders_submit'])->name('landing_page.sliders.submit');
+Route::get('/landing_page/sliders_edit/{id}', [CmsController::class, 'sliders_edit'])->name('landing_page.sliders.edit');
+Route::put('/landing_page/{id}/sliders_update', [CmsController::class, 'sliders_update'])->name('landing_page.sliders.update');
+
 Route::get('/landing_page/home', [CmsController::class, 'index'])->name('landing_page.home');
 Route::get('/landing_page/home_form', [CmsController::class, 'home_form'])->name('landing_page.home.create');
 Route::post('/landing_page/home_submit', [CmsController::class, 'home_submit'])->name('landing_page.home.submit');
@@ -83,6 +89,10 @@ Route::get('/landing_page/blog_edit/{id}', [CmsController::class, 'blog_edit'])-
 Route::put('/landing_page/{id}/blog_update', [CmsController::class, 'blog_update'])->name('landing_page.blog.update');
 
 Route::group(['middleware' => ['can:admin']], function () {
+    Route::delete('/landing_page/{id}/sliders_destroy', [CmsController::class, 'sliders_destroy'])->name('landing_page.sliders.destroy');
+    Route::get('/landing_page/sliders_posting/{id}', [CmsController::class, 'sliders_posting'])->name('landing_page.sliders.posting');
+    Route::get('/landing_page/sliders_unposting/{id}', [CmsController::class, 'sliders_unposting'])->name('landing_page.sliders.unposting');
+
     Route::delete('/landing_page/{id}/home_destroy', [CmsController::class, 'home_destroy'])->name('landing_page.home.destroy');
     Route::get('/landing_page/home_posting/{id}', [CmsController::class, 'home_posting'])->name('landing_page.home.posting');
 

@@ -7,6 +7,7 @@ use App\Models\CmsElPresidente;
 use App\Models\CmsHome;
 use App\Models\MasterBlog;
 use App\Models\MasterProgram;
+use App\Models\Sliders;
 use Dotenv\Util\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -14,6 +15,137 @@ use Illuminate\Support\Facades\Storage;
 
 class CmsController extends Controller
 {
+    public function sliders()
+    {
+        $data = Sliders::get();
+        return view('cms/sliders', compact('data'));
+    }
+
+    public function sliders_form()
+    {
+        $form = 'add';
+        return view('cms/form_sliders', compact('form'));
+    }
+
+    public function sliders_submit(Request $request)
+    {
+        $request->validate([
+            'type' => 'required',
+            'name_file' => 'required',
+        ]);
+
+        $file = $request->file('name_file');
+        $filename = 'sliders_' . date('YMdHis') . '.' . $file->getClientOriginalExtension();
+        $path = 'front/sliders/' . $filename;
+        Storage::disk('public')->put($path, file_get_contents($file));
+
+        $data = [
+            'type' => $request->type,
+            'name_file' => $filename,
+            'status' => 0,
+        ];
+        Sliders::create($data);
+        return redirect()->route('landing_page.sliders')->with('success', 'Data berhasil ditambah');
+    }
+
+    public function sliders_edit(string $id)
+    {
+        $form = 'edit';
+        $data = Sliders::where('id', $id)->first();
+        return view('cms/form_sliders', compact('form', 'data'));
+    }
+
+    public function sliders_update(Request $request, string $id)
+    {
+
+        $request->validate([
+            'section_title' => 'required',
+            'section_body' => 'required',
+            'section_title_dua' => 'required',
+            'section_body_dua' => 'required',
+            'section_title_tiga' => 'required',
+            'section_body_tiga' => 'required',
+        ]);
+
+        $data = [
+            'user_id' => Auth::user()->id,
+            'section_title' => $request->section_title,
+            'section_body' => $request->section_body,
+            'section_title_dua' => $request->section_title_dua,
+            'section_body_dua' => $request->section_body_dua,
+            'section_title_tiga' => $request->section_title_tiga,
+            'section_body_tiga' => $request->section_body_tiga,
+        ];
+
+        if ($request->file('section_img')) :
+            $file = $request->file('section_img');
+            $filename1 = 'section_img_' . date('YMdHis') . '.' . $file->getClientOriginalExtension();
+            $path = 'front/home/' . $filename1;
+            Storage::disk('public')->put($path, file_get_contents($file));
+            $data['section_img'] = $filename1;
+        endif;
+
+        if ($request->file('section_img_dua')) :
+            $file = $request->file('section_img_dua');
+            $filename2 = 'section_img_dua' . date('YMdHis') . '.' . $file->getClientOriginalExtension();
+            $path = 'front/home/' . $filename2;
+            Storage::disk('public')->put($path, file_get_contents($file));
+            $data['section_img_dua'] = $filename2;
+        endif;
+
+        if ($request->file('section_img_tiga')) :
+            $file = $request->file('section_img_tiga');
+            $filename3 = 'section_img_tiga' . date('YMdHis') . '.' . $file->getClientOriginalExtension();
+            $path = 'front/home/' . $filename3;
+            Storage::disk('public')->put($path, file_get_contents($file));
+            $data['section_img_tiga'] = $filename3;
+        endif;
+
+        if ($request->file('section_img_tiga_satu')) :
+            $file = $request->file('section_img_tiga_satu');
+            $filename31 = 'section_img_tiga_satu' . date('YMdHis') . '.' . $file->getClientOriginalExtension();
+            $path = 'front/home/' . $filename31;
+            Storage::disk('public')->put($path, file_get_contents($file));
+            $data['section_img_tiga_satu'] = $filename31;
+        endif;
+
+        if ($request->file('section_img_tiga_dua')) :
+            $file = $request->file('section_img_tiga_dua');
+            $filename32 = 'section_img_tiga_dua' . date('YMdHis') . '.' . $file->getClientOriginalExtension();
+            $path = 'front/home/' . $filename32;
+            Storage::disk('public')->put($path, file_get_contents($file));
+            $data['section_img_tiga_dua'] = $filename32;
+        endif;
+
+        CmsHome::where('id', $id)->update($data);
+        return redirect()->route('landing_page.home')->with('success', 'Data berhasil ditambah');
+    }
+
+    public function sliders_posting(string $id)
+    {
+        Sliders::where('id', $id)->update(["status" => 1]);
+        return redirect()->route('landing_page.sliders')->with('success', 'Data berhasil di publish');
+    }
+
+    public function sliders_unposting(string $id)
+    {
+        Sliders::where('id', $id)->update(["status" => 0]);
+        return redirect()->route('landing_page.sliders')->with('success', 'Data berhasil di un-publish');
+    }
+
+    public function sliders_destroy(string $id)
+    {
+        $cek_status = Sliders::where('id', $id)->first();
+        if ($cek_status->status == 1) :
+            return redirect()->route('landing_page.sliders')->with('error', 'Data yang sedang aktif tidak bisa dihapus');
+        else :
+            Sliders::where('id', $id)->delete();
+            return redirect()->route('landing_page.sliders')->with('success', 'Data berhasil dihapus');
+        endif;
+    }
+
+    // ===================================================== ABOUT US =====================================================
+
     public function index()
     {
         $id_user = Auth::user()->id;

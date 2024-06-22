@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Models\CmsElPresidente;
 use App\Models\MasterBlog;
 use App\Models\Merchant;
+use App\Models\Sliders;
 use App\Models\TransactionDetail;
 
 class FrontController extends Controller
@@ -30,6 +31,8 @@ class FrontController extends Controller
         $data['section_img3'] = $query->section_img_tiga;
         $data['section_img31'] = $query->section_img_tiga_satu;
         $data['section_img32'] = $query->section_img_tiga_dua;
+
+        $data['sliders'] = Sliders::where('status', 1)->get();
 
         return view('front/index', compact('data'));
     }
