@@ -24,7 +24,7 @@
                         <label for="">Type Sliders*</label>
                         <x-adminlte-select name="type" id="type">
                             <option value="0">Image</option>
-                            <option value="1">Vidio</option>
+                            <!-- <option value="1">Vidio</option> -->
                         </x-adminlte-select>
                     </div>
                     <div class="form-group">
